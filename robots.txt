@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omodakaokaya.github.io/omodaka-travel/sitemap.xml
