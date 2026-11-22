@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>13｜高遠の戦国・江戸時代の歴史・文化と桜を訪ねる｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            background-image: linear-gradient(90deg, rgba(5, 8, 7, 0.32) 0%, rgba(5, 8, 7, 0.18) 48%, rgba(5, 8, 7, 0.06) 100%), url('https://www.andtrip.jp/images/7b70fa12a1e91ce6a75e0745bf8c85ede8441b87.jpg');
+            background-size: cover, 80% auto;
+            background-position: center center, center center;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 16px 20px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .route-overview {
+            width: 100%;
+            margin: 0 0 18px;
+            padding: 21px;
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .route-overview h3 {
+            margin: 0 0 8px;
+            color: var(--ink)
+        }
+
+        .route-overview p {
+            margin: 0 0 12px;
+            color: #28332f
+        }
+
+        .route-overview .route-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px
+        }
+
+        .route-overview .route-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .photo-link {
+            margin: 18px 0 8px
+        }
+
+        .photo-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #c58a3a;
+            border-radius: 999px;
+            background: #c58a3a;
+            color: #111;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .18)
+        }
+
+        .photo-btn:hover {
+            background: #e0ad63;
+            border-color: #e0ad63
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, #111715, #26332d)
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+
+        /* Travel category navigation */
+        .travel-category-nav {
+            padding: 12px 0 46px;
+            background: #111715;
+            border-top: 1px solid #26302c
+        }
+
+        .travel-category-nav .nav-title {
+            margin: 0 0 18px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: .08em
+        }
+
+        .travel-category-nav .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px
+        }
+
+        .travel-category-nav .nav-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 8px 16px;
+            border: 1px solid #5a5142;
+            border-radius: 999px;
+            background: #1a211e;
+            color: #f1eee7;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.35;
+            transition: background .2s, border-color .2s, transform .2s
+        }
+
+        .travel-category-nav .nav-item:hover {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            transform: translateY(-1px)
+        }
+
+        .travel-category-nav .nav-item.current {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            font-weight: 700
+        }
+
+        .travel-category-nav .nav-home {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-home:hover {
+            background: #fff;
+            color: #111
+        }
+
+        .travel-category-nav .nav-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px
+        }
+
+        .travel-category-nav .nav-actions .nav-home {
+            margin-top: 0
+        }
+
+        .travel-category-nav .nav-actions .nav-stay {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-actions .nav-stay:hover {
+            background: #fff;
+            color: #111
+        }
+
+        @media(max-width:800px) {
+            .travel-category-nav {
+                padding: 10px 0 38px
+            }
+
+            .travel-category-nav .nav-grid {
+                gap: 8px
+            }
+
+            .travel-category-nav .nav-item {
+                font-size: 13px;
+                padding: 8px 13px
+            }
+
+            .travel-category-nav .nav-title {
+                font-size: 18px
+            }
+        }
+
+        /* Category navigation spacing adjustment */
+        .travel-category-nav {
+            padding-top: 0;
+        }
+
+        .hero+.travel-category-nav {
+            margin-top: 20px;
+        }
+
+        main+.travel-category-nav {
+            margin-top: -58px;
+        }
+
+        .brewery-group {
+            margin-bottom: 42px
+        }
+
+        .brewery-note {
+            margin: 18px 0 24px;
+            padding: 18px 22px;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e5ebe7
+        }
+
+        .brewery-note strong {
+            color: #fff
+        }
+
+        .brewery-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            margin-top: 12px
+        }
+
+        .brewery-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .gokura-panel {
+            margin-top: 24px;
+            padding: 24px;
+            border: 1px solid #303b36;
+            border-radius: 14px;
+            background: #161d1a;
+            color: #e5ebe7
+        }
+
+        .gokura-panel h3 {
+            margin-top: 0;
+            color: #fff
+        }
+
+        .gokura-panel a {
+            color: #f0c27e;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .gokura-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 18px 0
+        }
+
+        .gokura-list span {
+            display: block;
+            padding: 12px 8px;
+            border: 1px solid #5a5142;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            background: #202923;
+            font-weight: 700
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 16px 20px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        @media(max-width:800px) {
+            .gokura-list {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        .intro-panel {
+            margin-top: 24px;
+            padding: 18px 22px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9
+        }
+
+        .intro-panel strong {
+            color: #fff;
+        }
+
+        .area-label {
+            display: inline-block;
+            margin-bottom: 7px;
+            color: #8b5e20;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .05em
+        }
+
+        .detail h3 {
+            font-size: 20px;
+        }
+
+        .detail .meta {
+            margin-top: 12px;
+        }
+
+        .route-card {
+            background: #fff;
+            color: #17201d;
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 22px;
+            margin: 0 0 18px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .22)
+        }
+
+        .route-card h3 {
+            color: #17201d;
+            margin: 0 0 10px;
+            font-size: 21px;
+        }
+
+        .route-card p {
+            color: #28332f;
+            margin: 8px 0;
+        }
+
+        .route-card ol {
+            color: #28332f;
+            padding-left: 1.4em;
+            margin: 10px 0;
+        }
+
+        .route-card li {
+            margin: 4px 0;
+        }
+
+        .route-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            margin-bottom: 8px;
+            border-radius: 999px;
+            background: #f2e8d8;
+            color: #76501f;
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .food-card {
+            background: #fff;
+            color: #17201d;
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .food-card h3 {
+            margin: 0 0 8px;
+            color: #17201d;
+        }
+
+        .food-card p {
+            margin: 0;
+            color: #28332f;
+        }
+
+        .source-note {
+            font-size: 13px;
+            color: #d9e0dc;
+            margin-top: 18px;
+        }
+
+        @media(max-width:800px) {
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        .history-note {
+            margin: 18px 0 24px;
+            padding: 18px 22px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9;
+        }
+
+        .history-note strong {
+            color: #fff;
+        }
+
+        .history-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .history-timeline div {
+            padding: 15px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+        }
+
+        .history-timeline b {
+            display: block;
+            color: #e0ad63;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .history-timeline span {
+            color: #e8ece9;
+            font-size: 14px;
+        }
+
+        .quote-panel {
+            margin: 20px 0;
+            padding: 18px 22px;
+            border-left: 4px solid #c58a3a;
+            background: #161d1a;
+            color: #fff;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .quote-panel p {
+            margin: 0 0 8px;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .quote-panel small {
+            color: #d9e0dc;
+        }
+
+        .route-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            margin-top: 14px;
+        }
+
+        .route-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        @media(max-width:800px) {
+            .history-timeline {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width:520px) {
+            .history-timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 80% auto !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+
+<style id="omd-takato-hero-adjustments">
+/* 13 高遠：背景画像を縦横比を保ったまま横幅いっぱいに拡大 */
+main > .hero {
+  background-image: linear-gradient(90deg, rgba(5,8,7,0.52) 0%, rgba(5,8,7,0.38) 48%, rgba(5,8,7,0.20) 100%), url('https://www.andtrip.jp/images/7b70fa12a1e91ce6a75e0745bf8c85ede8441b87.jpg') !important;
+  background-size: cover, 80% auto !important;
+  background-position: center center, center center !important;
+  background-repeat: no-repeat, no-repeat !important;
+}
+.intro-panel {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+@media (max-width: 800px) {
+  main > .hero {
+    background-image: linear-gradient(180deg, rgba(5,8,7,0.52), rgba(5,8,7,0.35)), url('https://www.andtrip.jp/images/7b70fa12a1e91ce6a75e0745bf8c85ede8441b87.jpg') !important;
+    background-size: cover, 80% auto !important;
+  }
+}
+</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>13｜高遠の戦国・江戸時代の歴史・文化と桜を訪ねる</h1>
+                <p class="lead">戦国時代の激戦地・高遠城、名君・保科正之ゆかりの城下町、会津へ伝わった高遠そば、そして「天下第一の桜」。歴史と食文化、四季の風景を訪ねる伊那市高遠町への日帰り旅をご紹介します。
+                </p>
+                <div class="intro-panel">
+                    <strong>戦国の記憶から、江戸の文化、春の桜まで</strong><br>
+                    岡谷のOMODAKAから高遠までは、車でおおむね1時間前後を目安に訪ねられる日帰りエリアです。高遠城址公園を中心に、進徳館や高遠町歴史博物館、城下町の古い建物を巡り、昼食には名物の高遠そばを味わう旅はいかがでしょうか。
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item current" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank"
+                        rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="num">01｜戦国時代・高遠城の戦い</div>
+                <h2 class="section-title">武田家最後の拠点の一つとなった高遠城</h2>
+                <p class="section-lead">
+                    天正10年（1582年）、織田信長による甲州征伐の際、織田軍は武田領へ侵攻。高遠城では、武田信玄の五男で城主の仁科五郎盛信が、織田信忠を総大将とする軍勢を迎え撃ちました。</p>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">戦国時代・城跡</span>
+                        <h3>高遠城と仁科五郎盛信</h3>
+                        <p>仁科盛信は、武田信玄の五男です。信濃の名門・仁科氏の名跡を継ぎ、高遠城主となったことから、仁科姓を名乗りました。天正10年（1582年）3月、織田信長による甲州征伐において、信長の嫡男・織田信忠を総大将とする織田軍が高遠城に攻め寄せます。盛信は圧倒的な兵力差にもかかわらず徹底抗戦しましたが、高遠城はその日のうちに落城。盛信も城内で壮絶な最期を遂げたと伝えられています。 </p>
+                        <p>長野県歌「信濃の国」5番には「仁科の五郎信盛」と歌われています。県歌の表記は「信盛」ですが、現在の歴史紹介では「仁科五郎盛信」と記されることが一般的です。</p>
+                        <p class="meta">天正10年（1582年）3月2日｜高遠城の戦い</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://www.inacity.jp/kankojoho/sakura_meisho/takatojoshi_sakura/hyakumeijo.html"
+                                target="_blank" rel="noopener">高遠城跡の魅力をご紹介</a></p>
+                        <p class="source">県歌：<a href="https://www.pref.nagano.lg.jp/koho/mobile/kenka/kenka/5-6ban.html"
+                                target="_blank" rel="noopener">長野県「信濃の国」5・6番</a></p>
+                        <p class="source">観光協会：<a href="https://inashi-kankoukyoukai.jp/history/" target="_blank"
+                                rel="noopener">いなの歴史・仁科五郎盛信</a></p>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">高遠城址公園・史跡</span>
+                        <h3>高遠城址公園を歩く</h3>
+                        <p>現在の高遠城址公園には、城の建物そのものは残っていませんが、堀や土塁、曲輪、桜雲橋などに城の面影をたどることができます。公園内を歩きながら、仁科盛信が守った高遠城の地形や、戦国時代の攻防に思いを巡らせてみましょう。
+                        </p>
+                        <p>高遠城跡は国指定史跡です。伊那市は史跡の保存・活用計画を策定し、城跡の価値を伝える取り組みを進めています。</p>
+                        <p class="meta">所在地：伊那市高遠町東高遠｜桜の季節は入園方法・駐車場情報を要確認</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://inashi-kankoukyoukai.jp/locate/高遠城址公園/" target="_blank"
+                                rel="noopener">高遠城址公園</a></p>
+                        <p class="source">史跡情報：<a
+                                href="https://www.inacity.jp/shisei/kakushuplanshiryo/rekishibunka/takatojo_keikaku.html"
+                                target="_blank" rel="noopener">史跡高遠城跡保存活用計画</a></p>
+                    </article>
+                </div>
+                <div class="quote-panel">
+                    <p>「旭将軍義仲も　仁科の五郎信盛も」</p>
+                    <small>長野県歌「信濃の国」5番より。歌詞では「信盛」と表記されています。</small>
+                </div>
+                <div class="history-note">
+                    <strong>「信盛」と「盛信」について</strong><br>県歌の歌詞は「仁科の五郎信盛」ですが、長野県立図書館の調査では、当時の仁科氏関係文書には「盛信」と記される例が多いとされています。県歌は長く歌い継がれてきた原歌詞を尊重して「信盛」の表記を残しています。
+                </div>
+                <div class="history-note">
+                    <strong>伝承｜仁科盛信の壮絶な最期</strong><br>盛信の最期については、腹を十文字に切り、自ら腸（はらわた）をつかみ出して城壁に投げつけて果てた、という壮絶な逸話が伝えられています。高遠城跡の案内などにも記される有名な伝承です。</div>
+
+                <div class="num" style="margin-top:42px">02｜高遠で育った名君「保科正之」</div>
+                <h2 class="section-title">「天下の副将軍」とも称された名君の原点</h2>
+                <p class="section-lead">
+                    高遠藩主・保科正光の養子となった保科正之は、少年期から青年期にかけての19年間を高遠で過ごしました。後に初代会津藩主となり、4代将軍徳川家綱を補佐して幕政を支えた人物です。</p>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">江戸時代・高遠藩</span>
+                        <h3>保科正之――高遠で育った「天下の名君」</h3>
+                        <p>保科正之は、慶長16年（1611年）、2代将軍徳川秀忠と奥女中・お静の方との間に生まれました。出生は公にされず、武田信玄の娘・見性院のもとで養育された後、7歳のときに高遠藩主・保科正光の養子となり、高遠で少年・青年期を過ごしました。
+                        </p>
+                        <p>当時の記録や後世の逸話には、秀忠の正室・お江の方の嫉妬をはばかり、正之の出生や養育を人目につかないようにしたという話が伝わっています。
+                        </p>
+                        <p>正之はその後、山形藩主を経て初代会津藩主となり、3代将軍・徳川家光の異母弟として、4代将軍・徳川家綱の後見役を務めました。殉死の禁止や領民の生活を支える政策などを推進し、江戸時代屈指の名君と評価されています。また、幕政において大きな影響力を持ったことから、「天下の副将軍」とも称されました。
+                        </p>
+                        <p class="meta">高遠藩主：寛永8年（1631年）～寛永13年（1636年）｜高遠で過ごした期間：約19年</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://inashi-kankoukyoukai.jp/history/"
+                                target="_blank" rel="noopener">名君・保科正之公</a></p>
+                        <p class="source">国立公文書館：<a
+                                href="https://www.archives.go.jp/exhibition/digital/rekishitomonogatari/contents/45.html"
+                                target="_blank" rel="noopener">『落穂集』に見る正之の出生</a></p>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">高遠藩・会津藩のつながり</span>
+                        <h3>高遠から山形、そして会津へ</h3>
+                        <p>保科正之は寛永13年（1636年）に山形へ移り、寛永20年（1643年）には会津23万石の初代藩主となりました。高遠で過ごした年月は、正之の人格形成や政治姿勢の基礎となったとされています。正之は、養父・保科正光への恩義を重んじ、会津藩主となった後も、生涯にわたって「保科」姓を名乗り続けました。なお、3代会津藩主・正容の時代に、徳川幕府から松平姓と葵紋の使用を許され、以後、会津藩主家は明治維新まで松平姓を名乗りました。
+                        </p>
+                        <p>正之が会津藩の藩祖となったことから、高遠と会津には歴史的なつながりがあります。会津で受け継がれた「高遠そば」の呼び名や食文化も、そのつながりを伝える話題の一つです。</p>
+                        <p class="meta">高遠藩主の後、山形藩主を経て会津藩主へ</p>
+                        <p class="source">伊那市観光協会：<a href="https://inashi-kankoukyoukai.jp/history/" target="_blank"
+                                rel="noopener">いなの歴史・保科正之</a></p>
+                    </article>
+                </div>
+
+                <div class="num" style="margin-top:42px">03｜高遠そばと会津の食文化</div>
+                <h2 class="section-title">辛味大根と焼き味噌で味わう、高遠ならではのそば</h2>
+                <p class="section-lead">高遠そばの特徴は、辛味大根のおろし汁に焼き味噌を溶かして味わう「からつゆ」。そばの食べ方に、高遠と会津を結ぶ歴史が伝わっています。</p>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">郷土食・そば</span>
+                        <h3>高遠そば――辛つゆと焼き味噌</h3>
+                        <p>高遠そばは、辛味大根のおろし汁に焼き味噌を溶かした「からつゆ」で食べるのが特徴です。大根の辛味と味噌の風味がそばの味を引き立てます。店によって、かつお節を加えたり、醤油つゆと組み合わせたりするなど、つゆの仕立てには違いがあります。
+                        </p>
+                        <p>この食べ方は伊那谷に古くから伝わるもので、もともとは「辛つゆそば」とも呼ばれていました。高遠そばの名は、保科正之が高遠から山形を経て会津へ移った際に、そばの栽培や食べ方が伝わり、会津で「高遠そば」と呼ばれて受け継がれたという伝承に由来します。
+                        </p>
+                        <p>平成9年（1997年）に高遠町の人々が会津を訪れた際、会津に「高遠そば」の名と食べ方が残っていることを知り、翌年ごろから高遠でもその名を復活させる取り組みが始まりました。会津から高遠へ、呼び名が里帰りした食文化として紹介されています。
+                        </p>
+                        <p class="meta">味わい方：辛味大根のおろし汁＋焼き味噌（店により違いがあります）</p>
+                        <p class="source">伊那谷観光局：<a href="https://www.inadanikankou.jp/special/page/id=895"
+                                target="_blank" rel="noopener">伝承の食べ方、こだわりの栽培「高遠そば」</a></p>
+                        <p class="source">参考：<a href="https://nikkoku.co.jp/entertainment/glossary/post-62.php"
+                                target="_blank" rel="noopener">高遠そばの由来と特徴</a></p>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">高遠の食・城下町</span>
+                        <h3>高遠を訪ねたら、地元のそば店へ</h3>
+                        <p>高遠の町なかには、高遠そばを提供するそば店があります。辛味大根の風味や焼き味噌の濃さ、そばの食感は店ごとに異なります。歴史散策の昼食に、ぜひ高遠ならではの一杯を味わってみてください。
+                        </p>
+                        <p>観桜期は混み合うことがあるため、昼食の時間を少し早めるなど、余裕を持った計画がおすすめです。</p>
+                        <p class="source">観光案内：<a href="https://inashi-kankoukyoukai.jp/" target="_blank"
+                                rel="noopener">伊那市観光協会「おいでな伊那」</a></p>
+                    </article>
+                </div>
+
+                <div class="num" style="margin-top:42px">04｜高遠藩校・進徳館</div>
+                <h2 class="section-title">幕末の藩士教育を今に伝える、現存する藩校建築</h2>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">歴史的建造物・教育</span>
+                        <h3>進徳館（しんとくかん）</h3>
+                        <p>進徳館は、万延元年（1860年）3月、高遠藩主・内藤頼直によって創設された藩校です。和学・漢学・洋学・算法などの学問に加え、柔術・兵学・弓術・馬術・槍術・砲術などの武芸も教育内容に含まれていました。
+                        </p>
+                        <p>高遠城址公園内に建物が残り、幕末の藩校の姿を今に伝えています。建物内部は通常立ち入りできませんが、外観や周辺を見学できます。
+                        </p>
+                        <p class="meta">創設：万延元年（1860年）｜開館時間：8:30～17:00｜入場無料（建物内立入禁止）</p>
+                        <p class="source">伊那市公式：<a href="https://www.inacity.jp/shisetsu/kankoshisetsu/shintokukan.html"
+                                target="_blank" rel="noopener">進徳館・施設案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">高遠ゆかりの人物</span>
+                        <h3>進徳館で学んだ人々</h3>
+                        <p>進徳館では、後に教育者・政治家として活躍した人物も学びました。伊澤修二は近代日本の教育・音楽教育に大きな役割を果たした人物として知られています。高遠の教育文化をたどる際には、進徳館と高遠町歴史博物館をあわせて訪ねると理解が深まります。
+                        </p>
+                        <p class="source">伊那市公式：<a href="https://www.inacity.jp/shisetsu/kankoshisetsu/shintokukan.html"
+                                target="_blank" rel="noopener">進徳館・教育を受けた主な先人</a></p>
+                    </article>
+                </div>
+
+                <div class="num" style="margin-top:42px">05｜高遠町歴史博物館と絵島</div>
+                <h2 class="section-title">高遠藩の歴史と、江戸城大奥「絵島事件」を知る</h2>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">博物館・歴史</span>
+                        <h3>高遠町歴史博物館</h3>
+                        <p>高遠城と城下町の歴史、歴代藩主、地域の人物や民俗資料などを展示する博物館です。保科氏・鳥居氏・内藤氏の歴代藩主に関する資料や、進徳館ゆかりの人物、地元の美術・工芸に関する展示を通して、高遠の歴史を幅広く知ることができます。
+                        </p>
+                        <p class="meta">所在地：伊那市高遠町東高遠457｜開館時間・休館日・観覧料は公式案内で確認</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://www.inacity.jp/shisetsu/library_museum/rekishihakubutsukan/index.html"
+                                target="_blank" rel="noopener">高遠町歴史博物館</a></p>
+                        <p class="source">常設展示：<a
+                                href="https://www.inacity.jp/shisetsu/library_museum/rekishihakubutsukan/jousetsutenji/tenji.html"
+                                target="_blank" rel="noopener">常設展示のご案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">江戸時代・大奥</span>
+                        <h3>絵島囲み屋敷</h3>
+                        <p>江戸城大奥の大年寄だった絵島は、正徳4年（1714年）の「絵島事件」により高遠へ遠流となり、晩年をこの地で過ごしました。高遠町歴史博物館に隣接する絵島囲み屋敷は、当時の見取り図などをもとに復元された施設です。大奥の事件が、遠く信州高遠の歴史にもつながっていることを感じられます。
+                        </p>
+                        <p class="meta">歴史博物館に併設｜公開状況・見学方法は博物館公式案内で確認</p>
+                        <p class="source">伊那市観光協会：<a href="https://inashi-kankoukyoukai.jp/locate/高遠町歴史博物館/"
+                                target="_blank" rel="noopener">高遠町歴史博物館・絵島囲み屋敷</a></p>
+                        <p class="source">関連記事：<a href="https://ja.wikipedia.org/wiki/%E6%B1%9F%E5%B3%B6%E7%94%9F%E5%B3%B6%E4%BA%8B%E4%BB%B6"
+                                target="_blank" rel="noopener">Wikipedia「絵島生島事件」</a></p>
+                    </article>
+                </div>
+
+                <div class="num" style="margin-top:42px">06｜天下第一の桜・高遠城址公園</div>
+                <h2 class="section-title">ここにしか咲かない、タカトオコヒガンザクラ</h2>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">春・桜の名所</span>
+                        <h3>高遠城址公園の桜</h3>
+                        <p>高遠城址公園には、固有種タカトオコヒガンザクラが約1,500本植えられています。ソメイヨシノよりやや小ぶりで、赤みの強い花が特徴です。春には城跡一帯が淡い紅色に染まり、「天下第一の桜」と称されます。
+                        </p>
+                        <p>明治8年（1875年）ごろ、荒廃していた城跡を惜しんだ旧高遠藩士たちが、かつての馬場にあった桜を城址へ移植したことが公園の桜の始まりとされています。桜の樹林は長野県天然記念物に指定されています。
+                        </p>
+                        <p class="meta">見頃の目安：例年4月上旬～中旬｜開花時期・入園料・交通規制は毎年の公式発表を確認</p>
+                        <p class="source">桜まつり公式：<a href="https://takato-inacity.jp/about/" target="_blank"
+                                rel="noopener">天下第一の桜とは</a></p>
+                        <p class="source">伊那市公式：<a
+                                href="https://www.inacity.jp/kankojoho/sakura_meisho/takatojoshi_sakura/hyakumeijo.html"
+                                target="_blank" rel="noopener">高遠城址公園ガイド</a></p>
+                        <div class="history-note">
+                            <strong>伝承｜高遠の桜は、落城の血を吸って赤くなった？</strong><br>高遠の桜の花色がほかの桜より赤みを帯びているのは、天正10年（1582年）の高遠城の戦いで命を落とした人々の血を、城跡の桜が吸ったからだ――という言い伝えも残されています。もちろん、花の色は品種であるタカトオコヒガンザクラの特性によるものです。この伝承は、城を守って戦った人々の記憶と、春に城跡を彩る桜とを結びつけて語り継がれてきた物語です。
+                        </div>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">秋・紅葉</span>
+                        <h3>桜の季節以外の高遠城址公園</h3>
+                        <p>高遠城址公園は春の桜だけでなく、秋には園内のカエデが色づき、城跡の散策を楽しめます。桜の季節に比べて落ち着いた雰囲気の中で、堀や土塁、城跡の地形をじっくり眺められるのも魅力です。</p>
+                        <p>春の観桜期は特に混雑するため、歴史散策を目的とする場合は、桜の時期以外に訪れるのもおすすめです。</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://inashi-kankoukyoukai.jp/locate/高遠城址公園/" target="_blank"
+                                rel="noopener">高遠城址公園・四季の見どころ</a></p>
+                    </article>
+                </div>
+
+                <div class="num" style="margin-top:42px">07｜高遠の城下町と歴史的建造物</div>
+                <h2 class="section-title">旧馬島家・旧池上家に見る、城下町の暮らし</h2>
+                <div class="detail-grid">
+                    <article class="detail">
+                        <span class="area-label">長野県宝・武家住宅</span>
+                        <h3>旧馬島家住宅</h3>
+                        <p>江戸時代に高遠藩の眼科医を務めた馬島家の住宅です。天保年間（1830～1843年）に建てられた建物が大きく改造されずに残り、藩医の暮らしや当時の住宅建築を知ることができます。長野県宝に指定されています。
+                        </p>
+                        <p class="meta">所在地：伊那市高遠町東高遠2074｜民俗資料館の開館日・時間を確認</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://www.inacity.jp/shisetsu/library_museum/shiryokan/riyoannai/shiryokan_gaiyo.html"
+                                target="_blank" rel="noopener">伊那市民俗資料館・旧馬島家</a></p>
+                    </article>
+                    <article class="detail">
+                        <span class="area-label">城下町・商家建築</span>
+                        <h3>旧池上家住宅</h3>
+                        <p>高遠城下で醤油や酢の販売を行い、町問屋や町名主を務めた池上家の商家建築です。旧馬島家住宅とともに伊那市民俗資料館を構成する建物で、城下町の商業や町人の暮らしを伝えています。</p>
+                        <p class="meta">所在地：伊那市高遠町西高遠1724-1｜公開日・見学時間を公式案内で確認</p>
+                        <p class="source">伊那市公式：<a
+                                href="https://www.inacity.jp/shisetsu/library_museum/shiryokan/riyoannai/shiryokan_gaiyo.html"
+                                target="_blank" rel="noopener">伊那市民俗資料館・旧池上家</a></p>
+                    </article>
+                </div>
+
+                <div class="num" style="margin-top:42px">08｜OMODAKA発・高遠の日帰りモデルコース</div>
+                <h2 class="section-title">歴史・文化・そばを楽しむ高遠の一日</h2>
+                <p class="section-lead">高遠の主な見どころは比較的近い範囲に集まっています。施設の開館日や滞在時間を確認しながら、興味に合わせて組み合わせてください。</p>
+                <article class="route-card">
+                    <span class="route-tag">歴史・文化・郷土食</span>
+                    <h3>モデルコース A｜戦国から江戸時代の高遠を訪ねる</h3>
+                    <ol>
+                        <li>高遠城址公園を散策し、仁科盛信が守った城の地形や城跡を訪ねる</li>
+                        <li>進徳館を見学し、幕末の高遠藩の教育に触れる</li>
+                        <li>高遠町歴史博物館で歴代藩主や絵島事件の資料を見学</li>
+                        <li>城下町のそば店で、高遠そばを味わう</li>
+                        <li>時間に余裕があれば、旧馬島家住宅・旧池上家住宅を訪ねる</li>
+                    </ol>
+                    <p>高遠城の戦い、保科正之、高遠藩の教育と城下町の暮らしをたどる歴史散策コースです。博物館や民俗資料館の休館日を事前に確認しておくと安心です。</p>
+                    <div class="route-links"><a href="https://inashi-kankoukyoukai.jp/locate/高遠城址公園/"
+                            target="_blank" rel="noopener">高遠城址公園</a><a
+                            href="https://www.inacity.jp/shisetsu/kankoshisetsu/shintokukan.html" target="_blank"
+                            rel="noopener">進徳館</a><a
+                            href="https://www.inacity.jp/shisetsu/library_museum/rekishihakubutsukan/index.html"
+                            target="_blank" rel="noopener">高遠町歴史博物館</a></div>
+                </article>
+                <article class="route-card">
+                    <span class="route-tag">春・桜・城下町</span>
+                    <h3>モデルコース B｜天下第一の桜と高遠そばを楽しむ</h3>
+                    <ol>
+                        <li>朝の時間帯に高遠城址公園を訪れ、タカトオコヒガンザクラを鑑賞</li>
+                        <li>進徳館や城跡の史跡を散策</li>
+                        <li>高遠の町なかで高遠そばの昼食</li>
+                        <li>午後は高遠町歴史博物館や城下町の歴史的建造物を見学</li>
+                    </ol>
+                    <p>観桜期は周辺道路や駐車場が混雑します。交通規制、臨時駐車場、シャトルバスなど、その年の桜まつり公式情報を確認して計画してください。</p>
+                    <div class="route-links"><a href="https://takato-inacity.jp/" target="_blank"
+                            rel="noopener">高遠城址公園さくら祭り公式案内</a><a href="https://inashi-kankoukyoukai.jp/" target="_blank"
+                            rel="noopener">伊那市観光協会</a></div>
+                </article>
+                <div class="history-timeline">
+                    <div><b>1582年</b><span>高遠城の戦い。仁科盛信が織田信忠軍と戦う</span></div>
+                    <div><b>1611年</b><span>保科正之が誕生。のちに高遠藩主保科正光の養子となる</span></div>
+                    <div><b>1631～36年</b><span>保科正之が高遠藩主を務める</span></div>
+                    <div><b>1860年</b><span>高遠藩校・進徳館が創設される</span></div>
+                </div>
+                <div class="notice">
+                    <strong>お出かけ前にご確認ください</strong><br>
+                    高遠城址公園の桜まつり期間は、入園方法・料金・交通規制・駐車場運用が通常期と異なります。進徳館は建物内に立ち入れない場合があり、博物館・民俗資料館には休館日があります。訪問前に伊那市および各施設の公式サイトで最新情報をご確認ください。高遠そばの提供状況や営業時間も各店舗へご確認ください。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+        <div class="wrap">
+            <h2 class="nav-title">他のテーマページへ</h2>
+            <div class="nav-grid">
+                <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item current" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+            <div class="nav-actions">
+                <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrap">OMODAKA｜一棟貸切の宿｜長野県岡谷市</div>
+    </footer>
+</body>
+
+</html>

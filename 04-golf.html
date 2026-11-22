@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>04｜高原ゴルフを楽しむ｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            --hero-photo: url('https://i.gimg.jp/resource/reserve/gstart/gcimg/423103/06.jpg?w=1000');
+            background-image: linear-gradient(90deg, rgba(5, 8, 7, 0.32) 0%, rgba(5, 8, 7, 0.18) 42%, rgba(5, 8, 7, 0.06) 100%), var(--hero-photo);
+            background-size: cover, 80% auto;
+            background-position: center center, center center;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        .back {
+            margin: 25px 0
+        }
+
+        .photo {
+            display: none
+        }
+
+        .section-title:before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 1.05em;
+            background: var(--gold);
+            margin-right: 12px;
+            vertical-align: -.12em;
+            border-radius: 3px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5, 8, 7, 0.32), rgba(5, 8, 7, 0.15)), var(--hero-photo)
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+    
+/* Travel category navigation */
+.travel-category-nav{padding:12px 0 46px;background:#111715;border-top:1px solid #26302c}
+.travel-category-nav .nav-title{margin:0 0 18px;text-align:center;color:#fff;font-size:20px;letter-spacing:.08em}
+.travel-category-nav .nav-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.travel-category-nav .nav-item{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:1px solid #5a5142;border-radius:999px;background:#1a211e;color:#f1eee7;text-decoration:none;font-size:14px;line-height:1.35;transition:background .2s,border-color .2s,transform .2s}
+.travel-category-nav .nav-item:hover{background:#c58a3a;border-color:#c58a3a;color:#111;transform:translateY(-1px)}
+.travel-category-nav .nav-item.current{background:#c58a3a;border-color:#c58a3a;color:#111;font-weight:700}
+.travel-category-nav .nav-home{display:inline-block;margin-top:12px;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-home:hover{background:#fff;color:#111}
+.travel-category-nav .nav-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.travel-category-nav .nav-actions .nav-home{margin-top:0}
+.travel-category-nav .nav-actions .nav-stay{display:inline-block;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-actions .nav-stay:hover{background:#fff;color:#111}
+
+@media(max-width:800px){.travel-category-nav{padding:10px 0 38px}.travel-category-nav .nav-grid{gap:8px}.travel-category-nav .nav-item{font-size:13px;padding:8px 13px}.travel-category-nav .nav-title{font-size:18px}}
+
+/* Category navigation spacing adjustment */
+.travel-category-nav {
+    padding-top: 0;
+}
+/* Add spacing between the introductory content and the upper navigation block. */
+.hero + .travel-category-nav {
+    margin-top: 20px;
+}
+main + .travel-category-nav {
+    margin-top: -58px;
+}
+
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 80% auto !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+
+<style id="omd-hero-copy-position">
+/* Move the title and introductory text upward by approximately one line. */
+main > .hero > .wrap {
+    transform: translateY(-28px);
+}
+@media (max-width: 800px) {
+    main > .hero > .wrap {
+        transform: translateY(-20px);
+    }
+}
+</style>
+\n</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>04｜高原ゴルフを楽しむ</h1>
+                <p class="lead">岡谷・諏訪・蓼科・八ヶ岳・伊那谷周辺には、OMODAKAから手軽な料金で日帰りプレーを楽しめる本格的な高原ゴルフコースがいくつもあります。</p>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item current" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="detail-grid">
+                    <article class="detail">
+                        <h3>塩嶺カントリー倶楽部</h3>
+                        <p>日本を代表するゴルフ場設計家である上田 治氏設計による、標高約1,000mの塩嶺高原に位置する27ホールの本格的高原コース。OMODAKAから車で約17分と最も至近距離にあるコースです。
+                        </p>
+                        <p class="meta">OMODAKAから車約17分</p>
+                        <p class="source">公式情報：<a href="https://www.enrei.co.jp/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>諏訪レイクヒルカントリークラブ</h3>
+                        <p>フィリピンの名プロゴルファー、ベン・アルダ氏が日本で唯一設計を手掛けたコースとして知られる、水と緑に囲まれた27ホールの林間リゾートコース。OMODAKAから車約25分とアクセスのよいコースです。
+                        </p>
+                        <p class="meta">OMODAKAから車約25分</p>
+                        <p class="source">公式情報：<a href="https://www.suwa-lakehill.com/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>中央道晴ヶ峰カントリー倶楽部</h3>
+                        <p>金井清一 氏が設計・監修を手掛けた18ホールの丘陵・高原コース。八ヶ岳や諏訪湖、さらには東に南アルプス・西に中央アルプスを望む壮大なロケーションに位置しています。</p>
+                        <p class="meta">OMODAKAから車約45分</p>
+                        <p class="source">公式情報：<a href="https://booking.pacificgolf.co.jp/guide/70.html" target="_blank"
+                                rel="noopener">公式案内（PGM）</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>諏訪湖カントリークラブ</h3>
+                        <p>1963年（昭和38年）開場という諏訪エリアで最も歴史のある名門コースです。標高約1,100m。富士山、八ヶ岳、アルプスを望む景観が魅力の高原18ホールです。</p>
+                        <p class="meta">OMODAKAから車約40分</p>
+                        <p class="source">公式情報：<a href="https://suwako-cc.co.jp/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>富士見高原ゴルフコース</h3>
+                        <p>1974年（昭和49年）に開場し、県内の名門コースの一つとなっています。八ヶ岳南山麓の標高約1,300mの高原コースでありながら、各ホールは比較的フラットに整備されており、白樺やカラマツの豊富な樹木でセパレートされた重厚な林間コースの趣を備えています。
+                        </p>
+                        <p class="meta">OMODAKAから車約55分</p>
+                        <p class="source">公式情報：<a href="https://www.fujimikogen-gc.jp/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>蓼科高原カントリークラブ</h3>
+                        <p>昭和38年（1963年）開場の歴史を誇り、八ヶ岳や南アルプスの絶景を背景にプレーを楽しめる本格的な27ホールのリゾート＆林間コースです。日本の名設計家・富澤誠造氏設計による、趣の異なる3つの9ホール構成が魅力です。
+                        </p>
+                        <p class="meta">OMODAKAから車約45分</p>
+                        <p class="source">公式情報：<a href="https://www.alpico.co.jp/tateshinakogen-cc/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>蓼科東急ゴルフコース</h3>
+                        <p>1978年（昭和53年）開場、コース設計は名設計家・宮澤長平
+                            氏が手掛けました。標高1,300mの自然の地形の起伏を活かした18ホールのコースで、アウト・インともに全体的にフラットでドッグレッグや池、アンジュレーションがバランスよく配置されています。
+                        </p>
+                        <p class="meta">OMODAKAから車約65分</p>
+                        <p class="source">公式情報：<a href="https://www.tokyu-golf-resort.com/tateshina/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>三井の森蓼科ゴルフ倶楽部</h3>
+                        <p>1978年（昭和53年）開場。コース設計は名設計家・柳原 猛
+                            氏が手掛けました。標高1,000m超の高原のカラマツや白樺の巨木によって各ホールが完全にセパレートされており、四季折々の自然の美しさと重厚な林間コースの趣を備えています。</p>
+                        <p class="meta">OMODAKAから車約55分</p>
+                        <p class="source">公式情報：<a href="https://www.mitsuinomori.co.jp/golf-t/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>鹿島南蓼科ゴルフコース</h3>
+                        <p>日本プロゴルフ界の草分け的巨匠・安田幸吉 氏（OUTコース）と、名設計家・三浦一美
+                            氏（INコース）が設計を手掛け、鹿島建設グループによる開発・管理がなされています。標高1,250mの高原の赤松や落葉樹、白樺の自然林によって完全にセパレートされており、四季の景観と格式ある林間コースの佇まいを備えています。
+                        </p>
+                        <p class="meta">OMODAKAから車約55分</p>
+                        <p class="source">公式情報：<a href="https://kajima-resort.co.jp/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>信州伊那国際ゴルフクラブ</h3>
+                        <p>伊那谷（天竜川沿いの盆地）のなだらかな丘陵地帯・河岸段丘に位置しているため、山岳地帯の多い長野県のゴルフ場の中では全体的に起伏が少なく、比較的平坦なコースです。中央自動車道・伊那ICから車で約3分（約3km）という好アクセスを誇り、OMODAKAからも車40分という近さです。
+                        </p>
+                        <p class="meta">OMODAKAから車約40分</p>
+                        <p class="source">公式情報：<a href="https://inakoku.jp/" target="_blank" rel="noopener">公式サイト</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+            </div>
+        </section></main>
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item current" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="wrap">OMODAKA｜一棟貸切の宿｜長野県岡谷市</div>
+    </footer>
+</body>
+
+</html>

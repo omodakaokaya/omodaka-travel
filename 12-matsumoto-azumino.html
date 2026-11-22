@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>12｜松本・安曇野を楽しむ｜OMODAKA</title>
+<style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 620px;
+            min-height: 620px;
+            max-height: 620px;
+            padding: 92px 0 0;
+            background: #101614;
+            background-image: linear-gradient(90deg, rgba(5,8,7,0.52) 0%, rgba(5,8,7,0.38) 55%, rgba(5,8,7,0.20) 100%), url('./matsumoto-alps-castle.jpg');
+            background-size: cover, 95% auto;
+            background-position: center center, center center;
+            background-repeat: no-repeat, no-repeat;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 16px 20px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .route-overview {
+            width: 100%;
+            margin: 0 0 18px;
+            padding: 21px;
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .route-overview h3 {
+            margin: 0 0 8px;
+            color: var(--ink)
+        }
+
+        .route-overview p {
+            margin: 0 0 12px;
+            color: #28332f
+        }
+
+        .route-overview .route-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px
+        }
+
+        .route-overview .route-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .photo-link {
+            margin: 18px 0 8px
+        }
+
+        .photo-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #c58a3a;
+            border-radius: 999px;
+            background: #c58a3a;
+            color: #111;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .18)
+        }
+
+        .photo-btn:hover {
+            background: #e0ad63;
+            border-color: #e0ad63
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5,8,7,0.52), rgba(5,8,7,0.35)), url('./matsumoto-alps-castle.jpg')
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+
+        /* Travel category navigation */
+        .travel-category-nav {
+            padding: 12px 0 46px;
+            background: #111715;
+            border-top: 1px solid #26302c
+        }
+
+        .travel-category-nav .nav-title {
+            margin: 0 0 18px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: .08em
+        }
+
+        .travel-category-nav .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px
+        }
+
+        .travel-category-nav .nav-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 8px 16px;
+            border: 1px solid #5a5142;
+            border-radius: 999px;
+            background: #1a211e;
+            color: #f1eee7;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.35;
+            transition: background .2s, border-color .2s, transform .2s
+        }
+
+        .travel-category-nav .nav-item:hover {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            transform: translateY(-1px)
+        }
+
+        .travel-category-nav .nav-item.current {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            font-weight: 700
+        }
+
+        .travel-category-nav .nav-home {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-home:hover {
+            background: #fff;
+            color: #111
+        }
+
+        .travel-category-nav .nav-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px
+        }
+
+        .travel-category-nav .nav-actions .nav-home {
+            margin-top: 0
+        }
+
+        .travel-category-nav .nav-actions .nav-stay {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-actions .nav-stay:hover {
+            background: #fff;
+            color: #111
+        }
+
+        @media(max-width:800px) {
+            .travel-category-nav {
+                padding: 10px 0 38px
+            }
+
+            .travel-category-nav .nav-grid {
+                gap: 8px
+            }
+
+            .travel-category-nav .nav-item {
+                font-size: 13px;
+                padding: 8px 13px
+            }
+
+            .travel-category-nav .nav-title {
+                font-size: 18px
+            }
+        }
+
+        /* Category navigation spacing adjustment */
+        .travel-category-nav {
+            padding-top: 0;
+        }
+
+        .hero+.travel-category-nav {
+            margin-top: 20px;
+        }
+
+        main+.travel-category-nav {
+            margin-top: -58px;
+        }
+    
+        .brewery-group {
+            margin-bottom: 42px
+        }
+
+        .brewery-note {
+            margin: 18px 0 24px;
+            padding: 18px 22px;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e5ebe7
+        }
+
+        .brewery-note strong {
+            color: #fff
+        }
+
+        .brewery-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            margin-top: 12px
+        }
+
+        .brewery-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .gokura-panel {
+            margin-top: 24px;
+            padding: 24px;
+            border: 1px solid #303b36;
+            border-radius: 14px;
+            background: #161d1a;
+            color: #e5ebe7
+        }
+
+        .gokura-panel h3 {
+            margin-top: 0;
+            color: #fff
+        }
+
+        .gokura-panel a {
+            color: #f0c27e;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .gokura-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 18px 0
+        }
+
+        .gokura-list span {
+            display: block;
+            padding: 12px 8px;
+            border: 1px solid #5a5142;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            background: #202923;
+            font-weight: 700
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 16px 20px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        @media(max-width:800px) {
+            .gokura-list {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        .intro-panel {
+            margin-top: 24px;
+            padding: 18px 22px;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            background: transparent;
+            color: #e8ece9
+        }
+        .intro-panel strong { color: #fff; }
+        .area-label {
+            display: inline-block;
+            margin-bottom: 7px;
+            color: #8b5e20;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .05em
+        }
+        .detail h3 { font-size: 20px; }
+        .detail .meta { margin-top: 12px; }
+        .route-card {
+            background: #fff;
+            color: #17201d;
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 22px;
+            margin: 0 0 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.22)
+        }
+        .route-card h3 { color: #17201d; margin: 0 0 10px; font-size: 21px; }
+        .route-card p { color: #28332f; margin: 8px 0; }
+        .route-card ol { color: #28332f; padding-left: 1.4em; margin: 10px 0; }
+        .route-card li { margin: 4px 0; }
+        .route-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            margin-bottom: 8px;
+            border-radius: 999px;
+            background: #f2e8d8;
+            color: #76501f;
+            font-size: 12px;
+            font-weight: 700
+        }
+        .food-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+        .food-card { background:#fff; color:#17201d; border:1px solid #e3e0d8; border-radius:15px; padding:20px; }
+        .food-card h3 { margin:0 0 8px; color:#17201d; }
+        .food-card p { margin:0; color:#28332f; }
+        .source-note { font-size:13px; color:#d9e0dc; margin-top:18px; }
+        @media(max-width:800px) { .food-grid { grid-template-columns:1fr; } }
+
+
+        /* Matsumoto Castle photo: Boberger / Bengt Oberger, CC BY-SA 3.0, Wikimedia Commons */
+        
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 95% auto !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 620px !important;
+    min-height: 620px !important;
+    max-height: 620px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 620px !important;
+        min-height: 620px !important;
+        max-height: 620px !important;
+    }
+}
+</style>
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+<body>
+<header>
+<div class="wrap"><nav><div class="brand">OMODAKA</div></nav></div>
+</header>
+<main>
+<section class="hero">
+<div class="wrap">
+<div class="eyebrow">旅するOMODAKA</div>
+<h1>12｜松本・安曇野を楽しむ</h1>
+<p class="lead">城下町の歴史と文化が息づく松本、北アルプスの清らかな水と田園風景に包まれた安曇野。OMODAKAを拠点に、日帰りで訪ねたい魅力あふれるエリアをご紹介します。</p>
+<div class="intro-panel">
+<strong>OMODAKAから広がる、松本・安曇野の日帰り旅</strong><br/>
+                    岡谷から松本市街地・安曇野方面へは、車でおおむね1時間前後。松本城下町の散策、安曇野の湧水やわさび田、美術館めぐりなど、目的に合わせて一日を楽しめます。訪問先や道路状況、季節によって所要時間は変わりますので、出発前にルートをご確認ください。
+                </div>
+</div>
+</section>
+<section aria-label="旅するOMODAKA カテゴリー移動" class="travel-category-nav">
+<div class="wrap">
+<h2 class="nav-title">他のテーマページへ</h2>
+<div class="nav-grid">
+<a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item current" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+<div class="nav-actions">
+<a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+<a class="nav-stay" href="https://www.omodaka-okaya.com/" rel="noopener" target="_blank">OMODAKAに泊まる</a>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<div class="num">01｜松本の城下町と歴史・文化</div>
+<h2 class="section-title">二つの国宝と、城下町・近代建築を訪ねる</h2>
+<p class="section-lead">松本には国宝松本城と国宝旧開智学校があり、城下町の歴史に加えて、明治時代の近代教育や建築文化にも触れられます。中町通り・縄手通りの散策や、旧制松本高等学校の校舎が残るあがたの森公園も組み合わせて楽しめます。</p>
+<div class="detail-grid">
+<article class="detail">
+<span class="area-label">松本市・歴史</span>
+<h3>1．<a href="https://www.matsumoto-castle.jp/" rel="noopener" target="_blank">国宝 松本城</a></h3>
+<p>黒漆塗りの外観から「烏城」とも呼ばれる松本のシンボル。現存する五重六階の天守として日本最古とされる国宝の城です。堀に映る天守と北アルプスの眺めも魅力。天守内部では、急な階段を上りながら戦国時代の城の構造や歴史を体感できます。</p>
+<p class="meta">所在地：松本市丸の内｜天守見学には観覧券が必要</p>
+<p class="source">公式サイト：<a href="https://www.matsumoto-castle.jp/" rel="noopener" target="_blank">国宝 松本城</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・国宝・近代建築</span>
+<h3>2．<a href="https://matsu-haku.com/kaichi/" rel="noopener" target="_blank">国宝 開智学校</a></h3>
+<p>明治9年（1876年）に建てられた擬洋風建築の小学校校舎で、2019年に国宝に指定されました。八角形の塔屋や、和洋の意匠を取り入れた華やかな装飾が見どころです。校舎内では、近代日本の教育の歩みや当時の資料を見学できます。松本城とあわせて訪れたい、松本を代表する歴史文化スポットです。</p>
+<p class="meta">所在地：松本市開智｜開館時間・休館日・観覧料は訪問前に公式サイトで確認</p>
+<p class="source">施設公式サイト：<a href="https://matsu-haku.com/kaichi/" rel="noopener" target="_blank">国宝 旧開智学校</a></p>
+<p class="source">利用案内：<a href="https://matsu-haku.com/kaichi/info" rel="noopener" target="_blank">開館時間・休館日・観覧料</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・町並み</span>
+<h3>3．<a href="https://visitmatsumoto.com/spot/detail_1083.html" rel="noopener" target="_blank">縄手通り</a></h3>
+<p>女鳥羽川沿いに続く、昔懐かしい雰囲気の商店街。カエルをシンボルにした店やオブジェが並び、たい焼き、菓子、雑貨などの店をのぞきながら気軽に歩けます。四柱神社も隣接し、中町通りと合わせた城下町散策にぴったりです。</p>
+<p class="meta">所在地：松本市大手｜歩行者天国の通り</p>
+<p class="source">観光案内：<a href="https://visitmatsumoto.com/spot/detail_1083.html" rel="noopener" target="_blank">松本市公式観光サイト・縄手通り</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・町並み</span>
+<h3>4．<a href="https://nakamachi.org/about" rel="noopener" target="_blank">中町通り</a></h3>
+<p>白壁となまこ壁の土蔵が並ぶ、城下町松本を代表する商人町。蔵造りの建物を利用した工芸品店、雑貨店、カフェなどが点在し、買い物や食べ歩きを楽しみながら散策できます。通りに残る井戸や湧水にも注目してください。</p>
+<p class="meta">所在地：松本市中央｜松本城から徒歩圏内</p>
+<p class="source">観光案内：<a href="https://nakamachi.org/about" rel="noopener" target="_blank">中町通り公式案内</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・展望・自然</span>
+<h3>5．<a href="https://toybox-net.jp/alpspark/" rel="noopener" target="_blank">松本市アルプス公園</a></h3>
+<p>松本市街地の北西に広がる丘陵地の総合公園。西側には北アルプス連峰と安曇野、東側には美ヶ原と松本市街を望むことができ、晴れた日には雄大な山並みの眺望を楽しめます。園内の「山と自然博物館」には無料の展望室があり、北アルプスをはじめ360度の景色を眺められます。小鳥と小動物の森やアルプスドリームコースターなどもあり、自然の中でゆっくり過ごせるスポットです。</p>
+<p class="meta">所在地：松本市蟻ケ崎｜駐車場あり｜公園の施設・利用案内は公式サイトで確認</p>
+<p class="source">公園公式サイト：<a href="https://toybox-net.jp/alpspark/" rel="noopener" target="_blank">松本市アルプス公園</a></p>
+<p class="source">観光案内：<a href="https://visitmatsumoto.com/spot/detail_1180.html" rel="noopener" target="_blank">松本市公式観光サイト・松本市アルプス公園</a></p>
+<p class="source">関連施設：<a href="https://matsu-haku.com/yamatoshizen/" rel="noopener" target="_blank">松本市山と自然博物館</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・展望・歴史公園</span>
+<h3>6．<a href="https://visitmatsumoto.com/spot/detail_1178.html" rel="noopener" target="_blank">城山公園</a></h3>
+<p>松本市街地の北側に位置する、歴史ある眺望スポット。園内からは松本市街地に加え、安曇野や北アルプス、美ヶ原方面の景観を一望できます。アルプス公園と比べて市街地に近く、松本の街並みと山並みをあわせて眺めたいときにおすすめです。天候によって山の見え方が変わるため、晴れた日の訪問が適しています。</p>
+<p class="meta">所在地：松本市蟻ケ崎｜公園の利用・アクセス情報は公式サイトで確認</p>
+<p class="source">松本市公式サイト：<a href="https://visitmatsumoto.com/spot/detail_1178.html" rel="noopener" target="_blank">城山公園</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・歴史建築・公園</span>
+<h3>7．<a href="https://visitmatsumoto.com/spot/detail_1179.html" rel="noopener" target="_blank">あがたの森公園（県の森公園）</a></h3>
+<p>旧制松本高等学校の木造洋風建築（重要文化財）を中心に、ヒマラヤ杉の並木、日本庭園の池、広々とした芝生広場が広がる公園です。歴史ある校舎と四季折々の緑が調和し、ゆったりと散策するのにぴったり。城下町とは異なる、近代松本の文化や落ち着いた景観を楽しめます。</p>
+<p class="meta">所在地：松本市県3丁目｜駐車場あり｜公園は通年利用可</p>
+<p class="source">観光案内：<a href="https://visitmatsumoto.com/spot/detail_1179.html" rel="noopener" target="_blank">松本市公式観光サイト・あがたの森公園</a></p>
+</article><article class="detail">
+<span class="area-label">松本市・美術</span>
+<h3>8．<a href="https://matsumoto-artmuse.jp/" rel="noopener" target="_blank">松本市美術館</a></h3>
+<p>松本市出身の世界的な前衛芸術家・草間彌生の作品をはじめ、郷土ゆかりの作家や現代美術の展覧会を楽しめる美術館です。建物の外観や屋外作品も印象的。企画展の内容を確認して訪れると、より充実した時間を過ごせます。</p>
+<p class="meta">所在地：松本市中央｜開館時間・休館日は公式サイトで確認</p>
+<p class="source">公式サイト：<a href="https://matsumoto-artmuse.jp/" rel="noopener" target="_blank">松本市美術館</a></p>
+</article></div>
+<div class="num" style="margin-top:38px">02｜安曇野の自然と水の風景</div>
+<h2 class="section-title">北アルプスの湧水が育む、安曇野の風景</h2>
+<p class="section-lead">北アルプスの雪解け水が大地にしみ込み、各地に清らかな湧水をもたらす安曇野。わさび田や水車、神社、広々とした公園など、水と自然を身近に感じられる場所が広がっています。</p>
+<div class="detail-grid">
+<article class="detail">
+<span class="area-label">安曇野市・湧水</span>
+<h3>9．<a href="https://www.daiowasabi.co.jp/" rel="noopener" target="_blank">大王わさび農場</a></h3>
+<p>北アルプスの湧水を利用した、日本最大級のわさび農場。広々としたわさび田や清流、三連水車の風景が安曇野らしさを感じさせます。農場内を散策するほか、本わさびを使った料理やソフトクリーム、わさび関連のお土産も楽しめます。</p>
+<p class="meta">所在地：安曇野市穂高｜入場無料｜安曇野ICから車で約10分</p>
+<p class="source">公式サイト：<a href="https://www.daiowasabi.co.jp/" rel="noopener" target="_blank">大王わさび農場</a></p>
+</article>
+<article class="detail">
+<span class="area-label">安曇野市・神社</span>
+<h3>10．<a href="https://hotakajinja.com/" rel="noopener" target="_blank">穗髙神社（穂高神社）</a></h3>
+<p>日本アルプスの総鎮守として知られる、安曇野を代表する古社。海神族の祖神とされる穂高見命を祀り、上高地には奥宮、奥穂高岳山頂には嶺宮があります。境内の御船会館では、毎年行われる御船祭りに関わる船や人形などを見学できます。</p>
+<p class="meta">所在地：安曇野市穂高｜JR穂高駅から徒歩約3分</p>
+<p class="source">公式サイト：<a href="https://hotakajinja.com/" rel="noopener" target="_blank">穗髙神社</a></p>
+</article>
+<article class="detail">
+<span class="area-label">安曇野市・自然公園</span>
+<h3>11．<a href="https://azumino-koen.jp/horigane_hotaka/" rel="noopener" target="_blank">国営アルプスあづみの公園（堀金・穂高地区）</a></h3>
+<p>北アルプスの山並みを背景に、花畑や里山の風景、広い芝生広場などを楽しめる自然公園。季節ごとの花やイベント、体験プログラムがあり、散策や家族でのんびり過ごすのに適しています。園内は広いため、見たいエリアを決めて訪れるとよいでしょう。</p>
+<p class="meta">所在地：安曇野市堀金・穂高｜開園時間・休園日は季節により変動</p>
+<p class="source">公式サイト：<a href="https://azumino-koen.jp/horigane_hotaka/" rel="noopener" target="_blank">国営アルプスあづみの公園</a></p>
+</article>
+</div>
+<div class="num" style="margin-top:38px">03｜安曇野の美術館と田園風景</div>
+<h2 class="section-title">北アルプスを望む美術館めぐり</h2>
+<p class="section-lead">安曇野の北アルプス山麓には、自然と調和した美術館や博物館が点在しています。作品鑑賞と田園風景の散策を組み合わせ、ゆったりとした一日を過ごすのもおすすめです。</p>
+<div class="detail-grid">
+<article class="detail">
+<span class="area-label">安曇野市・彫刻</span>
+<h3>12．<a href="https://rokuzan.jp/" rel="noopener" target="_blank">碌山美術館</a></h3>
+<p>日本近代彫刻の先駆者・荻原守衛（碌山）の作品や資料を保存・公開する美術館。レンガ造りの教会風建物と緑豊かな庭が印象的で、作品だけでなく建築や庭の雰囲気も見どころです。穂高駅から徒歩圏内にあります。</p>
+<p class="meta">所在地：安曇野市穂高｜JR穂高駅から徒歩約7分</p>
+<p class="source">公式サイト：<a href="https://rokuzan.jp/" rel="noopener" target="_blank">碌山美術館</a></p>
+</article>
+<article class="detail">
+<span class="area-label">松川村・絵本</span>
+<h3>13．<a href="https://chihiro.jp/azumino/" rel="noopener" target="_blank">安曇野ちひろ美術館</a></h3>
+<p>絵本画家・いわさきちひろの作品や世界の絵本画家の作品を展示する美術館。北アルプスを望む広大な安曇野ちひろ公園に隣接し、『窓ぎわのトットちゃん』の世界を再現したトットちゃん広場もあります。美術館と公園を合わせて、ゆっくり過ごせます。</p>
+<p class="meta">所在地：北安曇郡松川村｜冬期休館あり</p>
+<p class="source">公式サイト：<a href="https://chihiro.jp/azumino/" rel="noopener" target="_blank">安曇野ちひろ美術館</a></p>
+</article>
+<article class="detail">
+<span class="area-label">安曇野周辺・美術館</span>
+<h3>14．<a href="https://azumino-artline.net/" rel="noopener" target="_blank">安曇野アートライン</a></h3>
+<p>北アルプスの麓に点在する美術館・博物館を結ぶエリアの総称です。碌山美術館、安曇野ちひろ美術館をはじめ、個性豊かな施設が参加しています。興味のある作家やテーマに合わせて訪問先を選び、自然の中をドライブしながら美術館めぐりを楽しめます。</p>
+<p class="meta">安曇野市・池田町・松川村など｜各施設の開館日を確認</p>
+<p class="source">案内サイト：<a href="https://azumino-artline.net/" rel="noopener" target="_blank">安曇野アートライン</a></p>
+</article>
+</div>
+<div class="num" style="margin-top:38px">04｜松本・安曇野の食を楽しむ</div>
+<h2 class="section-title">地元ならではの味覚も旅の楽しみ</h2>
+<p class="section-lead">観光の合間には、松本・安曇野ならではの食も楽しみましょう。訪問先の近くで地元の味を探すのも、日帰り旅の楽しみのひとつです。</p>
+<div class="food-grid">
+<article class="food-card">
+<h3>信州そば</h3>
+<p>松本・安曇野には、地元産のそば粉を使ったそば店が点在します。冷たいざるそばや、季節の山菜・野菜を添えたそばなど、店ごとの味を楽しめます。</p>
+</article>
+<article class="food-card">
+<h3>松本の山賊焼</h3>
+<p>鶏肉をにんにくの効いたタレに漬け込み、片栗粉をまぶして揚げた松本・塩尻地域の郷土料理。ボリュームのある地元グルメとして親しまれています。</p>
+</article>
+<article class="food-card">
+<h3>安曇野のわさび料理</h3>
+<p>清らかな湧水で育つ本わさびを使った料理や加工品が安曇野の名物。大王わさび農場では、本わさびを使った食事やスイーツ、お土産を楽しめます。</p>
+</article>
+</div>
+<p class="source-note">観光情報：<a href="https://www.matsumoto-tca.or.jp/" rel="noopener" target="_blank">松本観光コンベンション協会</a> ／ <a href="https://azumino-e-tabi.net/" rel="noopener" target="_blank">安曇野市観光協会</a></p>
+<div class="num" style="margin-top:42px">05｜OMODAKA発・日帰りモデルコース</div>
+<h2 class="section-title">目的に合わせて選ぶ、松本・安曇野の一日</h2>
+<p class="section-lead">以下は観光スポットを組み合わせたモデルプランです。各施設の滞在時間や季節、道路状況に合わせて、訪問先を調整してください。</p>
+<article class="route-card">
+<span class="route-tag">城下町・歴史文化</span>
+<h3>モデルコース A｜松本の二つの国宝と北アルプス展望を楽しむ</h3>
+<ol>
+<li>国宝 松本城を見学</li>
+<li>国宝 旧開智学校で明治時代の学校建築と教育の歴史に触れる</li>
+<li>縄手通り・四柱神社を散策</li>
+<li>中町通りで蔵造りの町並みや工芸品店、カフェを楽しむ</li>
+<li>時間に余裕があれば、あがたの森公園や松本市美術館へ</li>
+<li>最後にアルプス公園または城山公園へ。天候や時間に合わせて北アルプスの眺望を楽しむ</li>
+</ol>
+<p>松本城と旧開智学校という二つの国宝を中心に、城下町と近代建築を巡るコースです。締めくくりには、広い園内で自然も楽しめるアルプス公園、または市街地や安曇野を見渡せる城山公園のいずれかを選ぶと、北アルプスの眺望も楽しめます。山並みは天候によって見え方が変わるため、晴天の日がおすすめです。昼食には信州そばや山賊焼もどうぞ。</p>
+</article>
+<article class="route-card">
+<span class="route-tag">自然・湧水・歴史</span>
+<h3>モデルコース B｜安曇野の水と風景を訪ねる</h3>
+<ol>
+<li>穗髙神社に参拝し、御船会館を見学</li>
+<li>大王わさび農場でわさび田や三連水車を散策</li>
+<li>碌山美術館で彫刻作品と庭園を鑑賞</li>
+<li>安曇野のそば店やカフェで休憩</li>
+</ol>
+<p>穂高エリアを中心に、神社・湧水の風景・美術館を組み合わせたコースです。大王わさび農場では食事や買い物も楽しめます。</p>
+<div class="route-links"><a href="https://www.daiowasabi.co.jp/" rel="noopener" target="_blank">大王わさび農場 公式サイト</a><a href="https://hotakajinja.com/" rel="noopener" target="_blank">穗髙神社 公式サイト</a></div>
+</article>
+<article class="route-card">
+<span class="route-tag">美術館・自然公園</span>
+<h3>モデルコース C｜安曇野の美術館と公園を楽しむ</h3>
+<ol>
+<li>安曇野ちひろ美術館とトットちゃん広場を見学</li>
+<li>国営アルプスあづみの公園（堀金・穂高地区）で季節の自然を楽しむ</li>
+<li>安曇野アートラインの参加施設から、興味に合わせてもう一館を選ぶ</li>
+</ol>
+<p>美術館の展示替えや冬期休館日を確認して計画するコースです。各施設の距離があるため、移動時間に余裕を持ってお出かけください。</p>
+</article>
+<div class="notice">
+<strong>お出かけ前にご確認ください</strong><br/>
+                    美術館・博物館や公園は、休館日・開園時間・展示内容が季節や催事によって変わります。特に冬期休館や月曜休館の施設がありますので、各公式サイトで最新情報をご確認ください。また、松本市街地や安曇野の観光地では、休日や観光シーズンに駐車場が混雑することがあります。
+                </div>
+</div>
+</section>
+</main>
+<section aria-label="旅するOMODAKA カテゴリー移動" class="travel-category-nav">
+<div class="wrap">
+<h2 class="nav-title">他のテーマページへ</h2>
+<div class="nav-grid">
+<a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item current" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+<div class="nav-actions">
+<a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+<a class="nav-stay" href="https://www.omodaka-okaya.com/" rel="noopener" target="_blank">OMODAKAに泊まる</a>
+</div>
+</div>
+</section>
+<footer><div class="wrap">OMODAKA｜一棟貸切の宿｜長野県岡谷市</div></footer>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>01｜中部高原と絶景を楽しむ｜OMODAKA</title>
+    <style>
+:root{--bg:#0b0f0e;--bg2:#111715;--card:#fff;--ink:#17201d;--muted:#d9e0dc;--line:#2a3531;--gold:#c58a3a;--gold2:#e0ad63;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans JP","Yu Gothic",sans-serif;color:var(--muted);background:var(--bg);line-height:1.8}a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(8,11,10,.94);backdrop-filter:blur(12px);border-bottom:1px solid #26302c;z-index:5;color:#fff}nav{height:66px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:700;letter-spacing:.16em}.navlinks{display:flex;gap:18px;font-size:14px}.navlinks a{text-decoration:underline;text-underline-offset:3px}
+.hero{position:relative;overflow:hidden;padding:92px 0 0;background:#101614;--hero-photo:url('https://blog-imgs-112-origin.fc2.com/w/e/e/weeklymegamiko/201708062129127a3.jpg');background-image:linear-gradient(90deg,rgba(5,8,7,0.32) 0%,rgba(5,8,7,0.18) 42%,rgba(5,8,7,0.06) 100%),var(--hero-photo);background-size:cover;background-position:center;box-shadow:inset 0 -1px 0 rgba(255,255,255,.08)
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-size: cover, 80% auto;
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, center center;}
+.eyebrow{letter-spacing:.18em;font-size:12px;color:#fff}.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.12;margin:8px 0;color:#fff}.lead{font-size:19px;max-width:none;width:100%;color:#fff}.lead strong{color:#fff}.btn{display:inline-block;padding:9px 17px;border:1px solid #fff;border-radius:999px;text-decoration:none;margin-top:8px;color:#fff;background:rgba(0,0,0,.18)}.btn:hover{background:#fff;color:#111}
+section{padding:58px 0}.section-title{font-size:30px;margin:0 0 8px;color:#fff}.section-lead{max-width:800px;margin-bottom:25px;color:#d9e0dc}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.detail{background:var(--card);color:var(--ink);border:1px solid #e3e0d8;border-radius:15px;padding:21px;box-shadow:0 8px 24px rgba(0,0,0,.25)}.card h3,.detail h3{margin:4px 0 8px;color:var(--ink)}.detail{margin-bottom:18px}.detail p{color:#28332f}.meta{font-size:13px;color:#5c6863!important}.source{font-size:18px;color:#79521f!important;font-weight:700;margin-top:14px}.source a{color:#8b5e20;text-decoration:underline;text-underline-offset:3px}.route{background:#161d1a;border:1px solid #303b36;border-radius:12px;padding:20px;margin:24px 0;color:#fff}.route strong{color:#fff}.num{color:var(--gold2);letter-spacing:.14em;font-size:12px}.back{margin:25px 0}
+.photo{display:none}.section-title:before{content:"";display:inline-block;width:5px;height:1.05em;background:var(--gold);margin-right:12px;vertical-align:-.12em;border-radius:3px}
+footer{padding:40px 0;border-top:1px solid #26302c;color:#9ba7a1;font-size:12px;background:#080b0a}footer .wrap{color:#9ba7a1}
+@media(max-width:800px){.grid,.detail-grid{grid-template-columns:1fr}.navlinks{display:none}.hero{padding:60px 0 55px;background-image:linear-gradient(180deg,rgba(5,8,7,0.32),rgba(5,8,7,0.15)),var(--hero-photo)}.lead{font-size:17px}.section-title{font-size:26px}}
+
+/* Travel category navigation */
+.travel-category-nav{padding:12px 0 46px;background:#111715;border-top:1px solid #26302c}
+.travel-category-nav .nav-title{margin:0 0 18px;text-align:center;color:#fff;font-size:20px;letter-spacing:.08em}
+.travel-category-nav .nav-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.travel-category-nav .nav-item{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:1px solid #5a5142;border-radius:999px;background:#1a211e;color:#f1eee7;text-decoration:none;font-size:14px;line-height:1.35;transition:background .2s,border-color .2s,transform .2s}
+.travel-category-nav .nav-item:hover{background:#c58a3a;border-color:#c58a3a;color:#111;transform:translateY(-1px)}
+.travel-category-nav .nav-item.current{background:#c58a3a;border-color:#c58a3a;color:#111;font-weight:700}
+.travel-category-nav .nav-home{display:inline-block;margin-top:12px;padding:9px 4px;border:0;border-radius:0;color:#e0ad63;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px;font-size:16px;font-weight:700}
+.travel-category-nav .nav-home:hover{background:transparent;color:#fff}
+.travel-category-nav .nav-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:nowrap;width:100%;margin-top:12px}
+.travel-category-nav .nav-actions .nav-home{margin-top:0}
+.travel-category-nav .nav-actions .nav-stay{display:inline-block;padding:9px 4px;border:0;border-radius:0;color:#e0ad63;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px;font-size:16px;font-weight:700}
+.travel-category-nav .nav-actions .nav-stay:hover{background:transparent;color:#fff}
+
+@media(max-width:800px){.travel-category-nav{padding:10px 0 38px}.travel-category-nav .nav-grid{gap:8px}.travel-category-nav .nav-item{font-size:13px;padding:8px 13px}.travel-category-nav .nav-title{font-size:18px}.travel-category-nav .nav-actions{gap:18px;flex-wrap:wrap}}
+
+/* Category navigation spacing adjustment */
+.travel-category-nav {
+    padding-top: 0;
+}
+/* Close the navigation blocks tightly against the preceding content. */
+.hero + .travel-category-nav {
+    margin-top: 20px;
+}
+main + .travel-category-nav {
+    margin-top: -58px;
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+                
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>01｜中部高原と信州の絶景を楽しむ</h1>
+                <p class="lead">
+                    近隣の高ボッチ・鉢伏山での軽登山をはじめ、美ヶ原、ビーナスライン、八島湿原、車山、白樺湖、蓼科、入笠山など、魅力的な高原・山岳スポットが数多くあります。さらに少し足を延ばせば、上高地、乗鞍、中央アルプス、そして立山黒部アルペンルートまで。信州のほぼ中心に位置し、高速道路のインターチェンジへのアクセスにも恵まれたOMODAKAならではの、信州中部高地から中央アルプス・北アルプスに広がる雄大な山岳・高原風景を日帰りで楽しむ旅をご紹介します。</p>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item current" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="detail-grid">
+                    <article class="detail">
+                        
+                        <h3>高ボッチ高原・鉢伏山</h3>
+                        <p>高ボッチ高原は、諏訪湖を眼下に望む標高1,665mの高原で、山頂からは、諏訪湖と八ヶ岳をはじめ、北・中央・南アルプス、御嶽山、乗鞍岳などの山々を一望できます。天気のよい日には富士山まで姿を見せます。特に、諏訪湖を正面に望む眺望は圧巻で、朝夕の美しい光景や雲海を目当てに訪れる人も多い絶景スポットです。第2駐車場（頂上口）から山頂までは徒歩約10分（約400m）と比較的短く、軽い散策でこの大展望を楽しめるのも魅力です。さらに時間に余裕があれば、標高約1,929mの鉢伏山まで足を延ばすこともできます。鉢伏山の肩にある鉢伏山荘（標高約1,840m）までは車でアクセスでき、山荘から約25分の小登山で山頂に到達できます。山頂からは北アルプスを含む360度の大パノラマが広がり、より本格的な高原の山岳風景を楽しむことができます。
+</p>
+                        <p class="meta">岡谷市 ｜OMODAKAから高ボッチ第２駐車場まで車約40分</p>
+                        <p class="source">紹介記事：<a href="https://www.aohigetozan.com/entry/takabottiyama6-10-4"
+                                target="_blank" rel="noopener">高ボッチ高原・鉢伏山の紹介記事</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>美ヶ原高原</h3>
+                        <p>美ヶ原高原は、標高2,000m前後に広がる広大な草原の高原です。最高地点の王ヶ頭は標高2,034mで、周囲に大きな山がないため、北アルプスをはじめ、八ヶ岳や南アルプスなど信州を代表する山々を望むことができます。高原には遊歩道が整備され、シンボル的な存在である「美しの塔」から王ヶ頭方面へ、雄大な景色を眺めながら高原散策を楽しめます。夏には牛が放牧され、広々とした草原と牛が織りなす牧歌的な風景も美ヶ原ならではの魅力です。さらに王ヶ鼻まで足を延ばせば、松本市街地を眼下に、北アルプス方面の大パノラマを楽しむことができます。車で近くまでアクセスでき、本格的な登山装備がなくても高原の自然を気軽に楽しめるのも魅力です。初夏の新緑から夏の草原、秋の紅葉まで、季節ごとに異なる美しさを楽しめます。</p>
+                        <p class="meta">松本市・上田市・長和町｜OMODAKAから車約60分</p>
+                        <p class="source">公式サイト：<a href="http://www.utsukushigaharakogen.jp/" target="_blank"
+                                rel="noopener">美ヶ原高原公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>ビーナスライン</h3>
+                        <p>ビーナスラインは、茅野市から白樺湖、車山、霧ヶ峰、八島湿原などを経て美ヶ原高原へと続く、全長約76kmの高原道路です。標高1,500～2,000m前後の高原を走るため、森林の間を抜ける区間や、視界が一気に開ける草原など、変化に富んだ景色を楽しめます。途中には駐車場を備えた展望スポットが点在しており、車を停めて八ヶ岳や南・中央・北アルプス、富士山などを眺めることができます。特に霧ヶ峰の富士見台や三峰大展望台などは、ドライブ途中に気軽に立ち寄れるおすすめの展望スポットです。季節の草花や紅葉、夕暮れの高原風景など、訪れる時期によって異なる表情を楽しめるのも魅力です。ドライブそのものが旅の目的になる絶景ルートです。</p>
+                        <p class="meta">中部高原一帯｜OMODAKAから新和田峠経由ビーナスライン交差まで車約30分</p>
+                        <p class="source">公式サイト：<a href="https://www.go-nagano.net/nature-and-outdoors/id21713" target="_blank"
+                                rel="noopener">ビーナスライン公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>八島湿原</h3>
+                        <p>八島湿原は、ビーナスラインの途中、標高約1,630mに広がる、約12,000年の歴史を持つ日本を代表する高層湿原です。国の天然記念物に指定され、八島ヶ池や鎌ヶ池などの小さな池が点在し、季節の高原植物や花々を楽しむことができます。湿原には木道が整備され、一周約3.7kmで、ゆっくり歩いて約1時間30分。広々とした湿原の風景や季節の草花を間近に楽しめる、初心者にもおすすめの高原散策コースです。散策路の途中には「旧御射山（もとみさやま）遺跡」があり、諏訪大社下社の御射山祭の古い祭祀場として知られています。かつて鎌倉武士たちが競技を観覧するために土を盛って造られた、ローマのコロシアムを思わせる階段状の桟敷（さじき）の跡が、今も残されています。散策路の途中には山小屋カフェ「ヒュッテみさやま」があり、コーヒーやケーキ、カレーなどを味わいながら休憩できます。</p>
+                        <p class="meta">下諏訪町｜OMODAKAから車約40分</p>
+                        <p class="source">公式案内：<a href="https://shimosuwaonsen.jp/yashima/marsh/" target="_blank"
+                                rel="noopener">下諏訪観光協会・八島湿原案内</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>霧ヶ峰・車山</h3>
+                        <p>霧ヶ峰は、標高1,500～1,900mに広がる広大な高原で、なだらかな草原と雄大な山岳風景が魅力です。その最高峰が標高1,925mの車山で、夏にはニッコウキスゲをはじめとする高山植物が咲き、秋には草紅葉など、季節ごとに美しい高原の風景を楽しむことができます。車山の大きな魅力は、展望リフト「スカイライナー」「スカイパノラマ」を乗り継いで、山頂近くまで手軽に行けること。リフトで約15分、ほとんど歩かずに標高1,925mの車山山頂へ到達でき、山頂からは八ヶ岳、富士山、南・中央・北アルプス、浅間連峰など、360度に広がる大パノラマを楽しめます。また、車山山頂から周辺の高原を歩く散策コースもあり、ビーナスラインのドライブと組み合わせて、気軽に高原の自然を満喫できるおすすめのスポットです。</p>
+                        <p class="meta">諏訪市・茅野市｜OMODAKAから霧ヶ峰まで車約40分</p>
+                        <p class="source">紹介・観光案内：<a href="https://www.mapple.net/region/a0306020501/spot/"
+                                target="_blank" rel="noopener">霧ヶ峰・車山の紹介ページ</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>白樺湖・女神湖・白樺高原</h3>
+                        <p>白樺湖は、標高約1,400m、周囲約4kmの湖で、蓼科山や車山などの山々に囲まれた高原リゾートです。湖畔には遊歩道が整備され、湖を眺めながらの散策やボート遊びを楽しめます。湖畔には遊園地や美術館、レジャー施設が集まり、カヌーやSUP（スタンドアップパドルボード）、e-bikeなどのアウトドアアクティビティも楽しめます。</p>
+                        <p>白樺湖から少し足を延ばした立科町側には、静かな湖畔の風景が魅力の女神湖と、蓼科山の北麓に広がる白樺高原があります。白樺高原の蓼科牧場からは、ゴンドラリフトに乗って約6分、標高1,830mの山頂駅まで空中散歩を楽しめます。山頂駅に隣接する「女神のテラス1830」からは、女神湖や北アルプスの山並みを望む雄大なパノラマが広がります。また、ゴンドラ山頂駅から御泉水自然園へ足を延ばせば、豊かな森や高山植物、苔が織りなす自然の中を、木道に沿って散策できます。</p>
+                        <p>湖畔の散策や水上アクティビティに加え、ゴンドラで標高の高い自然園や展望テラスを訪れるなど、白樺湖・女神湖・白樺高原を組み合わせて一日楽しめるエリアです。</p>
+                        <p class="meta">茅野市・立科町｜OMODAKAから白樺湖まで車約50分、蓼科牧場まで約60分（目安）</p>
+                        <p class="source">観光案内：<a href="https://www.shirakabako.com/experience/?cat=activity" target="_blank" rel="noopener">白樺湖観光案内</a>｜公式サイト：<a href="https://whitebirch.co.jp/green-season/gondora/" target="_blank" rel="noopener">白樺高原・蓼科牧場ゴンドラ</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>北八ヶ岳ロープウェイ・坪庭</h3>
+                        <p>北八ヶ岳ロープウェイは、蓼科高原から標高2,237mの山頂駅まで、約7分で一気に登ることができる100人乗りの大型ロープウェイです。山頂駅に到着すると、目の前には北八ヶ岳の火山活動によって生まれた溶岩台地「坪庭」が広がり、ハイマツやコメツガなどの亜高山性の植物と、大小の溶岩が織りなす独特の景観を楽しめます。坪庭には一周約30～40分の散策路が整備されており、標高2,237mの高山を本格的な登山をせずに、山岳景観を楽しみながら手軽に歩けるのが大きな魅力です。山頂駅周辺からは、八ヶ岳や南・中央・北アルプスなどの山々を望むことができ、夏でも涼しい高原の空気を味わえます。さらに、体力と時間に余裕があれば、ここを起点に北横岳や縞枯山方面への本格的なトレッキングを楽しむこともできます。</p>
+                        <p class="meta">茅野市｜OMODAKAから車約70分</p>
+                        <p class="source">公式サイト：<a href="https://www.kitayatu.jp/ropeway/" target="_blank"
+                                rel="noopener">北八ヶ岳ロープウェイ</a>｜<a href="https://www.kitayatu.jp/toparea/" target="_blank"
+                                rel="noopener">坪庭・山頂エリア案内</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>蓼科高原</h3>
+                        <p>蓼科高原は、蓼科山の山麓に広がる標高1,000mを超える高原リゾートで、豊かな森や湖、渓谷、温泉など、多彩な自然を楽しむことができます。古くから避暑地として親しまれてきた地域です。高原の入口にある蓼科湖では、湖畔の散策やボート、SUP（スタンドアップパドルボード）、カヌーなどの水上アクティビティを楽しむことができ、周辺にはカフェやレストラン、ショップなどもあります。また、横谷峡では渓流沿いの遊歩道を歩きながら、乙女滝などの滝や森の自然を楽しめます。</p>
+                        <p class="meta">茅野市｜OMODAKAから車約70分</p>
+                        <p class="source">公式サイト：<a href="https://tateshina.ne.jp/" target="_blank"
+                                rel="noopener">蓼科高原公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>御射鹿池（みしゃかいけ）</h3>
+                        <p>御射鹿池は、蓼科高原の奥、標高約1,500mの山中にある、静かな水面と周囲の森が美しい景勝地です。水面にはカラマツ林や山の風景が鏡のように映し出され、幻想的な水鏡の景観をつくり出しています。日本画家・東山魁夷の代表作「緑響く」のモチーフとなったことでも知られ、蓼科を代表する景勝地の一つです。春は新緑、夏は深い緑、秋はカラマツの黄金色、冬は雪景色と、季節によって異なる表情を楽しむことができます。特に風の穏やかな早朝には、水面に周囲の景色が鮮明に映り、印象的な写真を撮ることができます。池の周辺には駐車場が整備されており、蓼科高原のドライブ途中に気軽に立ち寄ることができます。また、近くにある「おしどり隠しの滝」と組み合わせて訪れるのもおすすめです。蓼科観光や尖石縄文考古館を訪れた際に、少し足を延ばして立ち寄ることもお勧めです。
+</p>
+                        <p class="meta">茅野市｜OMODAKAから車約60分</p>
+                        <p class="source">観光案内：<a href="https://navi.chinotabi.jp/spot/3076/" target="_blank"
+                                rel="noopener">茅野観光ナビ</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>富士見パノラマリゾート・入笠山・入笠湿原</h3>
+                        <p>富士見パノラマリゾートは、富士見町にある通年型の高原リゾートで、ゴンドラを利用して標高1,780mの山頂駅まで手軽に上がることができます。山頂駅周辺には入笠すずらん山野草公園が広がり、春から秋にかけて多くの山野草が咲く、花の豊かな高原です。八ヶ岳展望台からは、八ヶ岳の山並みを間近に望むことができます。山頂駅から徒歩約10分で入笠湿原に到着します。標高1,734mに広がる湿原には木道が整備され、春から秋にかけてスズランをはじめとするさまざまな高原植物や山野草を楽しむことができます。入笠山山頂を目指す場合は、山頂駅から徒歩約60分。標高1,955mの山頂からは、富士山、八ヶ岳、南・中央・北アルプスなどを見渡す360度の大パノラマが広がります。本格的な登山をしなくてもゴンドラを利用して高原の自然を楽しめる一方、体力と時間に余裕があれば山頂までのトレッキングにも挑戦できる、幅広い楽しみ方ができる高原スポットです。</p>
+                        <p class="meta">富士見町｜ゴンドラ山麓駅駐車場までOMODAKAから車約40分</p>
+                        <p class="source">公式サイト：<a href="https://www.fujimipanorama.com/summer/" target="_blank"
+                                rel="noopener">富士見パノラマリゾート・夏季案内</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>上高地</h3>
+                        <p>上高地は、梓川の清流と穂高連峰をはじめとする北アルプスの山々が織りなす、日本を代表する山岳景勝地です。河童橋を中心に、大正池や田代湿原、明神池などを結ぶ遊歩道が整備され、清らかな川や原生林、雄大な山岳風景を楽しむことができます。OMODAKAからも日帰りが可能で、車の場合は岡谷ICから長野自動車道で松本ICへ向かい、国道158号を経て沢渡駐車場へ。ここからシャトルバスまたはタクシーに乗り換え、約30分で上高地に到着します。上高地はマイカー規制のため、自家用車で直接入ることはできません。OMODAKAから沢渡までは約1時間30分が目安です。河童橋周辺の散策だけでも十分楽しめますが、時間に余裕があれば大正池や明神池まで足を延ばすのもおすすめです。
+</p>
+                        <p class="meta">松本市｜OMODAKAから沢渡バスターミナルまで車80分＋バス30分</p>
+                        <p class="source">公式サイト：<a href="https://www.kamikochi.or.jp/" target="_blank"
+                                rel="noopener">上高地公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>乗鞍高原</h3>
+                        <p>乗鞍高原は、標高1,200～1,800mほどに広がる高原で、豊かな森林や草原、滝、湿原、温泉など、四季折々の自然を楽しめる山岳リゾートです。善五郎の滝や三本滝、一の瀬園地などには遊歩道が整備され、森林浴や高原散策を楽しむことができます。また、乗鞍高原温泉では、乳白色の温泉に浸かりながら、山旅の疲れを癒すことができます。OMODAKAからは車で約1時間30分～1時間45分。岡谷ICから長野自動車道で松本ICへ向かい、国道158号を上高地・高山方面へ進み、前川渡で県道84号に入り乗鞍高原へ向かいます。さらに時間と体力に余裕があれば、夏季は乗鞍高原からシャトルバスで標高約2,700mの畳平まで上がり、乗鞍岳の高山植物や山岳景観を楽しむこともできます。</p>
+                        <p class="meta">松本市｜OMODAKAから車約100分</p>
+                        <p class="source">公式サイト：<a href="https://norikura.gr.jp/" target="_blank"
+                                rel="noopener">乗鞍高原公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>中央アルプス駒ヶ岳ロープウェイ・千畳敷カール</h3>
+                        <p>中央アルプス駒ヶ岳ロープウェイは、しらび平駅から標高2,612mの千畳敷駅まで、高低差950mを一気に上る、日本最大の高低差を誇る山岳ロープウェイです。千畳敷駅を降りると、氷河によって形成された「千畳敷カール」が広がり、中央アルプスの山々と高山植物が織りなす雄大な景観を楽しめます。カールには一周約45分の遊歩道が整備され、夏の高山植物や秋の紅葉・黄葉も見どころです。さらに、体力と時間に余裕があれば、目の前にそびえる宝剣岳への登山も楽しめます。往復約2時間30分（休憩時間を含まず）の本格的な山岳登山となるため、トレッキングシューズなど登山装備が必要です。<br>
+                       朝早くOMODAKAを出発し、中央道・駒ヶ根ICを経由して菅の台バスセンターまで車で約45分。そこから路線バスで約30分、しらび平駅でロープウェイに乗り換え、約7分30秒で千畳敷駅に到着します。
+。</p>
+                        <p class="meta">駒ヶ根市｜OMODAKAから中央道・駒ヶ根IC経由で菅の台バスセンターまで車約45分＋しらび平駅までバス約30分</p>
+                        <p class="source">公式サイト：<a href="https://www.chuo-alps.com/" target="_blank"
+                                rel="noopener">中央アルプス駒ヶ岳ロープウェイ公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>立山黒部アルペンルート・黒部ダム・室堂</h3>
+                        <p>立山黒部アルペンルートは、長野県大町市の扇沢駅と富山県立山町の立山駅を結ぶ、北アルプスを貫く山岳観光ルートです。OMODAKAから訪れる場合は、車で長野県側の玄関口・扇沢駅へ向かい、ここを起点に室堂まで往復するコースがおすすめです。扇沢から関電トンネル電気バスで黒部ダムへ進み、黒部湖から黒部ケーブルカー、立山ロープウェイ、立山トンネル電気バスを乗り継いで、標高2,450mの室堂に到着します。途中の黒部ダムでは高さ186mの堰堤や雄大なダム湖を眺め、大観峰では後立山連峰の景色を楽しめます。室堂では、立山連峰を背景にした「みくりが池」周辺の散策がおすすめです。室堂ターミナルからみくりが池までは徒歩約10～15分です。<br>
+                        朝早くOMODAKAを出発し、扇沢駅の始発便に合わせてアルペンルートに入れば、室堂まで往復する日帰り旅行が可能です。公式サイトの「扇沢～室堂往復・メインスポット満喫コース」では、黒部ダムや室堂での滞在を含めて所要時間は約6～7時間と案内されています。扇沢駅までの車移動も含めると一日がかりの行程となりますが、朝早く出発すれば夕方から夜にOMODAKAへ戻る旅として計画できます。</p>
+                        <p class="meta">富山県・長野県｜OMODAKAから長野道・豊科IC経由で扇沢駅まで車約1時間30分</p>
+                        <p class="meta">【冬季運休の注釈】アルペンルート内の乗り物は、例年12月1日から翌年4月14日まで冬季運休となります。</p>
+                        <p class="source">公式サイト：<a href="https://www.alpen-route.com/index.php" target="_blank" rel="noopener">立山黒部アルペンルート</a>｜<a href="https://www.alpen-route.com/diainfo/" target="_blank" rel="noopener">運行情報</a>｜<a href="https://www.alpen-route.com/model_course/course03/" target="_blank" rel="noopener">扇沢～室堂往復モデルコース</a>｜<a href="https://www.alpen-route.com/timetable/" target="_blank" rel="noopener">時刻表</a>｜<a href="https://www.alpen-route.com/access_new/fare/person/index.php" target="_blank" rel="noopener">運賃</a></p>
+                    </article>
+
+                </div>
+                <div class="route">
+                    <strong>OMODAKAからの日帰り旅として</strong><br>近隣の高ボッチ・ビーナスライン・蓼科・入笠方面に加え、上高地、乗鞍、中央アルプス、立山黒部アルペンルートまで、日帰りで訪れることができます。訪問日が決まったら、必ず公式サイトで乗り物の運行状況・時刻表・きっぷの販売状況を確認し、余裕を持った行程を組んでください。
+                </div>
+            </div>
+        </section></main>
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item current" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="wrap">
+            OMODAKA｜一棟貸切の宿｜長野県岡谷市
+        </div>
+    </footer>
+</body>
+
+</html>

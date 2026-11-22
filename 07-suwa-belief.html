@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>07｜古代諏訪信仰 ― ミシャクジ神とタケミナカタ ― に触れる｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            --hero-photo: url('https://japanupclose.web-japan.org/files/100635411.jpeg');
+            background-image: linear-gradient(90deg, rgba(5, 8, 7, 0.65) 0%, rgba(5, 8, 7, 0.50) 42%, rgba(5, 8, 7, 0.30) 100%), var(--hero-photo);
+            background-size: cover, 80% auto;
+            background-position: center center, center center;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        .back {
+            margin: 25px 0
+        }
+
+        .photo {
+            display: none
+        }
+
+        .section-title:before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 1.05em;
+            background: var(--gold);
+            margin-right: 12px;
+            vertical-align: -.12em;
+            border-radius: 3px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5, 8, 7, 0.65), rgba(5, 8, 7, 0.42)), var(--hero-photo)
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+    
+/* Travel category navigation */
+.travel-category-nav{padding:12px 0 46px;background:#111715;border-top:1px solid #26302c}
+.travel-category-nav .nav-title{margin:0 0 18px;text-align:center;color:#fff;font-size:20px;letter-spacing:.08em}
+.travel-category-nav .nav-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.travel-category-nav .nav-item{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:1px solid #5a5142;border-radius:999px;background:#1a211e;color:#f1eee7;text-decoration:none;font-size:14px;line-height:1.35;transition:background .2s,border-color .2s,transform .2s}
+.travel-category-nav .nav-item:hover{background:#c58a3a;border-color:#c58a3a;color:#111;transform:translateY(-1px)}
+.travel-category-nav .nav-item.current{background:#c58a3a;border-color:#c58a3a;color:#111;font-weight:700}
+.travel-category-nav .nav-home{display:inline-block;margin-top:12px;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-home:hover{background:#fff;color:#111}
+.travel-category-nav .nav-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.travel-category-nav .nav-actions .nav-home{margin-top:0}
+.travel-category-nav .nav-actions .nav-stay{display:inline-block;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-actions .nav-stay:hover{background:#fff;color:#111}
+
+@media(max-width:800px){.travel-category-nav{padding:10px 0 38px}.travel-category-nav .nav-grid{gap:8px}.travel-category-nav .nav-item{font-size:13px;padding:8px 13px}.travel-category-nav .nav-title{font-size:18px}}
+
+/* Category navigation spacing adjustment */
+.travel-category-nav {
+    padding-top: 0;
+}
+/* Add spacing between the introductory content and the upper navigation block. */
+.hero + .travel-category-nav {
+    margin-top: 20px;
+}
+main + .travel-category-nav {
+    margin-top: -58px;
+}
+
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 80% auto !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>07｜古代諏訪信仰 ― ミシャクジ神とタケミナカタ ― に触れる</h1>
+                <p class="lead">諏訪盆地には、縄文時代から続く自然への畏敬と、古代の信仰が重なり合った独特の信仰世界が息づいています。その中心にあるのが、この地に古くから伝わる「ミシャクジ神」の信仰です。ミシャクジ神を祀っていた土着勢力の首長とされるのが、洩矢神（モリヤ）です。諏訪には、出雲の国譲りの際、高天原から派遣されたタケミカヅチとの戦いに敗れ、諏訪へ敗走してきたタケミナカタが、この地に進出し、洩矢神と天竜川を挟んで陣を構えて戦ったという伝承があります。戦いの後、タケミナカタを神として祀る諏訪大社が成立する一方、洩矢神の子孫と伝えられる神長官守矢家は、諏訪大社の祭祀とミシャクジ神の祭祀を担ってきました。縄文の時代から続く自然信仰と、タケミナカタ神の信仰が重なり合い、独特の諏訪信仰が形づくられていきました。</p>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item current" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="detail-grid">
+                    <article class="detail">
+                        <h3>諏訪大社 上社前宮（茅野市）</h3>
+                        <p>諏訪大社上社前宮は、諏訪大社四社の中でも最も古い歴史を持つ社とされ、諏訪信仰発祥の地と伝えられています。御祭神は八坂刀売神（ヤサカトメノカミ）で、建御名方神（タケミナカタノカミ）の妃（妻）とされます。背後に御神体山である守屋山を仰ぎ、自然そのものを御神体とする古代の信仰形態を今に伝えています。境内には水眼の清流や神原、御柱、十間廊などがあり、現在も4月15日に行われる、鹿の頭部の剥製などを供物として供える御頭祭をはじめ、古くからの神事が受け継がれています。
+                        </p>
+                        <p class="source">公式情報：<a href="https://suwataisha.or.jp/about/miyamori/kamishamaemiya/"
+                                target="_blank" rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>諏訪大社 上社本宮（諏訪市）</h3>
+                        <p>諏訪大社上社本宮は、守屋山の山麓に広がる原生林に抱かれるように鎮座する、諏訪信仰の中心となる社です。御祭神は建御名方神（タケミナカタノカミ）。本殿を持たず、神体山を拝する古来の自然信仰の姿を今に伝えています。境内には、石の凹面に水を湛えることから「硯石」と呼ばれる磐座があり、諏訪大神がこの石の上に出現したと伝えられています。四隅に御柱を立て、幣拝殿と左右の片拝殿が並ぶ独特の「諏訪造り」も大きな特徴です。
+                        </p>
+                        <p class="source">公式情報：<a href="https://suwataisha.or.jp/about/miyamori/kamishahonmiya/"
+                                target="_blank" rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>諏訪大社 下社秋宮（下諏訪町）</h3>
+                        <p>諏訪大社下社秋宮は、旧中山道と甲州道中が交わる交通の要所（下諏訪町）に鎮座する、下社の中心的な社です。御祭神は建御名方神（タケミナカタノカミ）と八坂刀売神（ヤサカトメノカミ）。本殿を持たず、宝殿の奥に立つ樹齢数百年のイチイの木を御神木として祀る、古来の自然信仰を今に伝えています。境内では、国の重要文化財に指定された神楽殿と幣拝殿の華麗な彫刻が見どころです。手水からは御神湯が湧き、諏訪の信仰と温泉文化を身近に感じることができます。
+                        </p>
+                        <p class="source">公式情報：<a href="https://suwataisha.or.jp/about/miyamori/shimoshaakimiya/"
+                                target="_blank" rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>諏訪大社 下社春宮（下諏訪町）</h3>
+                        <p>諏訪大社下社春宮は、旧中山道沿いの静かな森の中に鎮座する、諏訪大社四社の一つです。御祭神は建御名方神、八坂刀売神、八重事代主神。下社は本殿を持たず、春宮では宝殿の奥にある杉の御神木を御神体として祀っており、自然そのものを神として敬う古い信仰の姿を今に伝えています。境内には、万治2年（1659年）建立と推定される石鳥居や、室町時代の様式を残し、下社で最も古い建物とされる下馬橋があります。また、境内を西へ進むと、砥川に浮かぶ浮島を経て、徒歩約5分でユニークな姿の「万治の石仏」を訪ねることができます。
+                        </p>
+                        <p class="source">公式情報：<a href="https://suwataisha.or.jp/about/miyamori/shimoshaharumiya/"
+                                target="_blank" rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>神長官守矢史料館（茅野市）</h3>
+                        <p>神長官守矢史料館は、諏訪大社上社の祭祀を担ってきた守矢家に伝わる古文書や祭礼資料を展示する史料館です。守矢家は、諏訪に伝わる神話の中で、建御名方神と争った土着神・洩矢神（モリヤノカミ）の後裔を称し、明治まで神長官を世襲してきました。中でも注目したいのが、御柱祭と並ぶ重要な祭礼「御頭祭」の復元展示。敷地内には「御頭御社宮司（オントウミシャグジ）総社」もあり、縄文時代まで遡ると考えられている諏訪地域の土着の神「ミシャグジ神」をめぐる、古い諏訪信仰の姿を今に伝えています。
+                        </p>
+                        <p class="source">公式情報：<a href="https://note.com/luluscabinet/n/nfa75e135fd43" target="_blank"
+                                rel="noopener">紹介記事</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>御頭御社宮司（オントウミシャグジ）総社（茅野市）</h3>
+                        <p>神長官守矢家の屋敷の敷地奥に鎮座する「御頭御社宮司（オントウミシャグジ）総社」は、諏訪地域に古くから伝わるミシャグジ神を祀る社です。ミシャグジ神は、縄文時代まで遡るとも考えられている諏訪地域の土着の神。守矢氏は代々、諏訪大社上社の神長官として、この古い神の祭祀を担ってきました。背後には御神体山・守屋山がそびえ、古代からの信仰が息づくこの場所は、守屋山の御神気（ごしんき）を感じる、長野県でも屈指のパワースポットとして知られています。
+                        </p>
+                        <p class="source">案内情報：<a
+                                href="https://ja.wikipedia.org/wiki/%E3%83%9F%E3%82%B7%E3%83%A3%E3%82%B0%E3%82%B8"
+                                target="_blank" rel="noopener">紹介記事</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>洩矢神社（岡谷市）</h3>
+                        <p>岡谷市川岸東に鎮座し、諏訪地方の伝承に登場する洩矢神（モリヤノカミ）を祭神とする神社です。伝承では、諏訪に進出してきた建御名方神（タケミナカタノカミ）と、先住の神である洩矢神が天竜川を挟んで争い、敗れた洩矢神は建御名方神に仕えるようになったとされます。また、洩矢神は諏訪大社上社の祭祀を担った守矢氏の遠祖とも伝えられています。現在の社殿は天竜川から約200m離れた場所にありますが、もとは川辺に鎮座していたといわれ、諏訪信仰の成り立ちを伝えるゆかりの地です。</p>
+                        <p class="meta">岡谷市川岸東｜OMODAKAから車で約9分</p>
+                        <p class="source">紹介記事：<a href="https://ja.wikipedia.org/wiki/%E6%B4%A9%E7%9F%A2%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">洩矢神社（Wikipedia）</a></p>
+                    </article>
+                </div>
+                <div class="route"><strong>おすすめコース</strong>
+                    <ul>
+                        <li>OMODAKA → 上社前宮 → 神長官守矢史料館 → 上社本宮 → 上諏訪・下諏訪で昼食 → 下社秋宮 → 下社春宮 →
+                            OMODAKA。諏訪大社四社だけでなく、守矢家とミシャグジ神をめぐる場所まで訪ねることで、諏訪の古層の信仰をより深く感じることができます。なお、守矢神社は、時間に余裕があれば気軽に立ち寄って参拝できます。</li>
+                    </ul>
+                </div>
+            </div>
+        </section></main>
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item current" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="wrap">OMODAKA｜一棟貸切の宿｜長野県岡谷市</div>
+    </footer>
+</body>
+
+</html>

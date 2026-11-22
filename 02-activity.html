@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>02｜家族・友人でアクティビティを楽しむ｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            --hero-photo: url('https://stat.ameba.jp/user_images/20240814/05/hyakubyakka-1031/9d/4a/j/o1080081015474513656.jpg');
+            background-image: linear-gradient(90deg, rgba(5, 8, 7, 0.32) 0%, rgba(5, 8, 7, 0.18) 42%, rgba(5, 8, 7, 0.06) 100%), var(--hero-photo);
+            background-size: cover, 80% auto;
+            background-position: center center, center center;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        .back {
+            margin: 25px 0
+        }
+
+        .photo {
+            display: none
+        }
+
+        .section-title:before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 1.05em;
+            background: var(--gold);
+            margin-right: 12px;
+            vertical-align: -.12em;
+            border-radius: 3px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5, 8, 7, 0.32), rgba(5, 8, 7, 0.15)), var(--hero-photo)
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+    
+/* Card note text */
+.card-note { font-size: 14px; }
+
+/* Travel category navigation */
+.travel-category-nav{padding:12px 0 46px;background:#111715;border-top:1px solid #26302c}
+.travel-category-nav .nav-title{margin:0 0 18px;text-align:center;color:#fff;font-size:20px;letter-spacing:.08em}
+.travel-category-nav .nav-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.travel-category-nav .nav-item{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:1px solid #5a5142;border-radius:999px;background:#1a211e;color:#f1eee7;text-decoration:none;font-size:14px;line-height:1.35;transition:background .2s,border-color .2s,transform .2s}
+.travel-category-nav .nav-item:hover{background:#c58a3a;border-color:#c58a3a;color:#111;transform:translateY(-1px)}
+.travel-category-nav .nav-item.current{background:#c58a3a;border-color:#c58a3a;color:#111;font-weight:700}
+.travel-category-nav .nav-home{display:inline-block;margin-top:12px;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-home:hover{background:#fff;color:#111}
+.travel-category-nav .nav-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.travel-category-nav .nav-actions .nav-home{margin-top:0}
+.travel-category-nav .nav-actions .nav-stay{display:inline-block;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-actions .nav-stay:hover{background:#fff;color:#111}
+
+@media(max-width:800px){.travel-category-nav{padding:10px 0 38px}.travel-category-nav .nav-grid{gap:8px}.travel-category-nav .nav-item{font-size:13px;padding:8px 13px}.travel-category-nav .nav-title{font-size:18px}}
+
+/* Category navigation spacing adjustment */
+.travel-category-nav {
+    padding-top: 0;
+}
+/* Add spacing between the introductory content and the upper navigation block. */
+.hero + .travel-category-nav {
+    margin-top: 20px;
+}
+main + .travel-category-nav {
+    margin-top: -58px;
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>02｜家族・友人でアクティビティを楽しむ</h1>
+                <p class="lead">公園で遊ぶ、湖畔を歩く、動物とふれあう、森を駆ける、高原で体を動かす。家族や友人と一緒に、岡谷・諏訪・蓼科・富士見周辺で楽しめるアクティビティをご紹介します。</p>
+                <div class="notice">
+                    <strong>OMODAKAを拠点に日帰りで楽しめるアクティビティです。</strong><br>近隣の公園で遊具遊びしながらのんびり過ごすプランから、アスレチック、パラグライダー、マウンテンバイク、乗馬など本格的なアウトドアスポーツまで、年齢や体力に合わせて楽しめます。営業日・営業時間・季節営業、天候による中止などについては、出発前に各施設の最新情報をご確認ください。
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item current" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="detail-grid">
+                    <article class="detail">
+
+                        <h3>やまびこ公園（岡谷）</h3>
+                        <p>鳥居平やまびこ公園は、標高約1,000m、約30haの広大な高原公園です。諏訪湖を眼下に、八ヶ岳や富士山などを望む展望広場をはじめ、豊かな自然の中でさまざまなアクティビティを楽しめます。子どもたちには、全長約600mのコースを滑走するサマーボブスレー、ジャンボすべり台、おもしろ自転車、サイクリング、アスレチック遊具、ターザンロープ、渓流広場での水遊びなどが人気です。大人もマレットゴルフ、9ホールのディスクゴルフ、テニス、ローラースケートなどを楽しめます。芝生広場での遊びや自然散策もでき、家族や友人で一日楽しめる、OMODAKAから車で約10分の高原レジャースポットです。家族・グループでのBBQを展望広場で楽しめるのも魅力です。通年スケートができる屋内リンクのアイスアリーナが隣接するやまびこの森にあります。
+                        </p>
+                        <p class="meta">岡谷市｜OMODAKAから車約10分</p>
+                        <p class="source">公式サイト：<a href="https://yamabiko.okaya-park.com/guide/" target="_blank"
+                                rel="noopener">やまびこ公園 施設案内</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>岡谷湖畔公園</h3>
+                        <p>岡谷湖畔公園は、諏訪湖岸約3.5kmにわたって広がる、湖と自然を身近に楽しめる総合公園です。湖畔の遊歩道や芝生広場では、散策やジョギング、ピクニックを楽しめ、子ども向けの遊具や人工なぎさも整備されています。公園内には36ホールのマレットゴルフ場もあり、家族や友人と気軽に楽しめます。また、芝生広場には「諏訪湖BBQマリーナ」があり、諏訪湖と八ヶ岳を眺めながら、食材や機材の準備・片付けが不要な「手ぶらBBQ」を楽しめます。家族やグループで気軽にアウトドア気分を味わえるのが魅力です。高さ約55mまで噴き上がる白鳥をイメージした湖上噴水は公園のシンボルで、夜にはライトアップされます。さらに、8月15日の諏訪湖祭湖上花火大会、翌16日の岡谷花火まつりを楽しむ際にも絶好のロケーション。特に岡谷花火まつりは岡谷湖畔公園が会場となります。OMODAKAから車で約5分と近く、家族や友人と楽しめる湖畔のレジャースポットです。<br><span class="card-note">※花火大会時は車が込み合いますので、OMODAKAからは徒歩（約20分）でのお出かけをお勧めします。</span>
+                        </p>
+                        </p>
+                        <p class="meta">岡谷市｜OMODAKAから車6分または徒歩20分</p>
+                        <p class="source">公式案内：<a href="https://okaya-park.com/kohan/ikoi/" target="_blank"
+                                rel="noopener">岡谷湖畔公園 いこいとやすらぎのゾーン</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>道の駅 小坂田公園</h3>
+                        <p>道の駅
+                            小坂田公園は、塩尻市の国道20号沿いにある、道の駅と広大な公園が一体となった家族向けのレジャースポットです。子どもたちに人気のゴーカートやバッテリーカー、屋外遊具、噴水広場のほか、36ホールのマレットゴルフ、3×3バスケットコート、BBQ広場など、さまざまなアクティビティを楽しめます。管理棟には大型ネット遊具、ボルダリング、チューブスライダーなどを備えた「室内子どもアスレチック」があり、雨の日や暑い日でも天候に左右されず、体を動かして遊べるのが大きな魅力です。さらに、自然博物館や地元産品を扱う「小坂田マルシェ790」、食堂もあり、遊び・食事・買い物を一か所で楽しめます。OMODAKAから国道20号線経由で車約20分と近距離にあります。
+                        </p>
+                        <p class="meta">塩尻市｜OMODAKAから車約20分</p>
+                        <p class="source">公式サイト：<a href="https://osakada-park.jp/" target="_blank"
+                                rel="noopener">小坂田公園公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>チロルの森</h3>
+                        <p>信州塩尻農業公園「チロルの森」は、塩嶺カントリークラブすぐ近くの標高約1,000mの豊かな自然の中にある、オーストリア・チロル地方をモチーフにした体験型テーマパークです。園内では、ヤギやジャンボウサギなどの動物とのふれあい、ゴーカート、おもしろ自転車、芝すべり、エア遊具など、子どもたちが楽しめるアクティビティが充実しています。また、宝石探しや木工教室、シルバニアファミリーの「あそびのお部屋」など、体験型の施設も楽しめます。レストランやファストフードでは、自家製の濃厚ミルクソフトクリームなども味わえ、遊びと食事を一日楽しめる家族向けのレジャースポットです。OMODAKAから車で約20分とアクセスが良いのも魅力です。
+                        </p>
+                        <p class="meta">塩尻市｜OMODAKAから車約20分</p>
+                        <p class="source">公式サイト：<a href="https://www.shiojiri-tirol.jp/" target="_blank"
+                                rel="noopener">信州塩尻農業公園 チロルの森</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>富士見パノラマリゾート｜パラグライダー＆マウンテンバイク</h3>
+                        <p>富士見パノラマリゾートは、八ヶ岳や南・中央・北アルプスを望む、通年型の高原リゾートです。グリーンシーズンには、ゴンドラで標高1,780mの山頂駅まで上がり、入笠すずらん山野草公園や八ヶ岳展望台、入笠湿原などを巡る高原散策を楽しめます。さらに、山頂駅から徒歩約60分で標高1,955mの入笠山山頂へ。山頂からは富士山や日本アルプスを望む360度の大パノラマが広がります。アクティビティも充実しており、国内最大級のマウンテンバイクフィールドでは初心者向けコースやレンタルを利用でき、家族でも楽しめます。また、パラグライダーではインストラクターと一緒に、雄大な景観の中をタンデムフライトを体験することもできます。
+                        </p>
+                        <p class="meta">富士見町｜OMODAKAからゴンドラ駅まで車約8分</p>
+                        <p class="source">公式サイト：<a href="https://www.fujimipanorama.com/summer/" target="_blank"
+                                rel="noopener">富士見パノラマリゾート・夏季案内</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>諏訪湖・湖畔のアクティビティ</h3>
+                        <p>八ヶ岳や霧ヶ峰などの山々に囲まれた諏訪盆地の中央に広がる諏訪湖。周囲約16kmの湖畔にはサイクリングロードやジョギングロードが整備され、四季折々の景色を楽しみながら、気軽に体を動かすことができます。湖上では、カヤック、SUP、ヨット、モーターボートなどの水上アクティビティを楽しめるほか、諏訪湖遊覧船から湖上の景色を眺めることもできます。また、水陸両用バス「諏訪湖ダックツアー」では、陸上からそのまま湖へ入るユニークな体験も楽しめます。湖畔には公園や足湯、美術館、博物館なども点在しており、サイクリングや散策と組み合わせて一日を過ごすことができます。アクティブに楽しむ方から、湖を眺めながらゆっくり過ごしたい方まで、世代を問わず楽しめる信州を代表するレイクサイド・スポットです。
+                        </p>
+                        <p class="meta">諏訪湖周辺｜OMODAKAから車約6分から45分</p>
+                        <p class="source">紹介・観光案内：<a
+                                href="https://www.go-nagano.net/nature-and-outdoors/id22414#anchor02" target="_blank"
+                                rel="noopener">Go NAGANO｜諏訪湖・湖畔のアクティビティ</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>池の平ファミリーランド（白樺湖）</h3>
+                        <p>池の平ファミリーランドは、白樺湖畔に広がる、遊園地と自然体験を組み合わせて楽しめる高原のファミリーリゾートです。園内には、シラカバウッドコースターやアドベンチャーカート、メリーゴーランドなどのアトラクションをはじめ、巨大アスレチック「ポリーランド」、木曽馬の乗馬体験、動物とのふれあい、ボルダリングなど、多彩なアクティビティが揃っています。また、展望リフトで黄金アカシアの丘に上がれば、白樺湖や周囲の山々を望む高原の景色を楽しめます。2026年に新設された「インドアパーク」には、屋内型アスレチック「カラックリ」や0～5歳向けの「きっず×きっず」、デジタルゲーム、卓球などがあり、雨の日でも体を動かして遊べます。隣接する室内温水プールにはウォータースライダーもあり、天候に左右されず楽しめるのも大きな魅力です。子どもから大人まで、一日たっぷり遊べる白樺湖エリアを代表するレジャースポットです。
+                        </p>
+                        <p class="meta">立科町・白樺湖｜OMODAKAから車約50分</p>
+                        <p class="source">公式サイト：<a href="https://www.shirakabaresort.jp/familyland/" target="_blank"
+                                rel="noopener">白樺リゾート 池の平ファミリーランド</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>フォレストアドベンチャー・蓼科</h3>
+                        <p>フォレストアドベンチャー・蓼科は、東急リゾートタウン蓼科の豊かな森の中で、木の上を進む本格的なアスレチックを楽しめるアウトドア施設です。専用ハーネスを装着し、自分で安全器具を操作しながら、吊り橋や丸太渡り、ジップスライドなど、さまざまな樹上アクティビティに挑戦します。高さや難易度の異なるコースが用意されており、子どもから大人まで、体力や経験に合わせて楽しめます。森の中を空中から移動するスリルと爽快感を味わえるのが大きな魅力で、家族や友人同士のアクティビティにおすすめです。OMODAKAから車で約70分。樹上アスレチックの体験コースを利用する場合は、事前に利用日時とコースを予約することをおすすめします。
+                        </p>
+                        <p class="meta">茅野市｜OMODAKAから車約70分</p>
+                        <p class="source">公式サイト：<a href="https://foret-aventure.jp/park/fa-tateshina/" target="_blank"
+                                rel="noopener">フォレストアドベンチャー・蓼科</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>鷹山(たかやま）ファミリー牧場｜雨天でも楽しめる体験型牧場</h3>
+                        <p>OMODAKAから車で約35分。北白樺高原・標高約1,300mにある、家族で楽しめる体験型の観光牧場です。動物とのふれあいから乗り物、食の手作り体験まで、さまざまなアクティビティを楽しむことができます。雨天でも楽しめる「乳搾り」や「魚（ニジマス）のつかみどり」、「トラクター乗車」に加え、晴天時には「やぎさんぽ」、「ポニー乗馬」などの動物ふれあい体験のほか、「四輪バギー」も楽しめます。さらに、「ソーセージ作り」「バター作り」「スモークチーズ作り」「牧場の牛乳を使ったアイスクリーム作り体験」など、雨天でも楽しめる体験が充実しているのも大きな魅力です。牧場内では、鷹山ファミリー牧場で肥育された牛肉を使った焼肉ランチなども楽しめます。すぐ近くには「黒耀石体験ミュージアム」もありますので、両施設を組み合わせたプランもおすすめです。<br><span class="card-note">※体験メニューや営業日は、団体貸切などにより変更される場合があります。お出かけ前に公式サイトで最新情報をご確認ください。</span>
+                        </p>
+                        <p class="meta">長和町・北白樺高原｜OMODAKAから車約35分</p>
+                        <p class="source">公式サイト：<a href="https://www.famiboku.jp/" target="_blank"
+                                rel="noopener">鷹山ファミリー牧場</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>長門牧場｜乗馬・トラクター遊覧・バター作り</h3>
+                        <p>標高約1,400mの白樺高原に広がる長門牧場。広大な牧草地と北アルプスなどの雄大な山々を望む、開放感あふれる高原の牧場です。放牧されたホルスタインや短角牛を眺めながら、のんびりとした時間を過ごすことができます。牧場では、広い草原を馬で散策する乗馬体験や、牧草地をトラクターの荷台に乗って巡る「トラクター遊覧」などを楽しめます。また、牧場の牛乳を使ったバター作り体験など、牧場ならではの体験イベントも開催されています。冬には牧草地がスノーシュー、クロスカントリースキー、そり遊びのフィールドとして開放され、季節ごとに異なる楽しみ方ができます。新鮮な牛乳を使ったアイスクリームやチーズ、ヨーグルトなどの乳製品も味わえる、家族や友人との高原ドライブにおすすめのスポットです。
+                        </p>
+                        <p class="meta">長和町・白樺高原｜OMODAKAから車約60分</p>
+                        <p class="source">公式サイト：<a href="https://www.nagatofarm.com/" target="_blank"
+                                rel="noopener">信州白樺高原 長門牧場</a></p>
+                    </article>
+                    <article class="detail">
+
+                        <h3>蓼科牧場ゴンドラリフト・御泉水自然園</h3>
+                        <p>蓼科牧場ゴンドラリフトは、蓼科牧場から標高1,830mの山頂駅まで、標高差約300mを約7分で結ぶ空中散歩を楽しめるゴンドラです。ゴンドラの車窓からは、眼下に広がる女神湖や白樺高原の森、遠く北アルプスまで望むことができ、四季折々の高原風景を楽しめます。
+                        山頂駅には展望スポット「女神のテラス1830」があり、女神湖や北アルプス、霧ヶ峰、美ヶ原方面まで見渡すことができます。ハンモックやソファ席で高原の風を感じながら、ゆっくり景色を楽しめるのも魅力です。
+                        さらに山頂駅からは、標高1,830mに広がる「御泉水自然園」へ。カラマツなどの原生林や湿原、清流の中に遊歩道や木道が整備され、高山植物や野鳥を眺めながら森林浴を楽しむことができます。ゴンドラで手軽に標高1,830mの自然を楽しめる、おすすめの高原スポットです。
+                        </p>
+                        <p class="meta">立科町｜OMODAKAから車約50分</p>
+                        <p class="source">公式サイト：<a href="https://whitebirch.co.jp/green-season/" target="_blank"
+                                rel="noopener">蓼科牧場ゴンドラリフト・御泉水自然園</a></p>
+                    </article>
+                </div>
+                <div class="route">
+                    <strong>OMODAKAから家族・友人で楽しむ日帰りプラン</strong><br>近場のやまびこ公園や岡谷湖畔公園なら、宿から気軽に出かけて短時間でも楽しめます。もう少し足を延ばして小坂田公園やチロルの森、白樺湖、蓼科、富士見方面へ行けば、半日〜1日のアクティビティを組み立てることもできます。季節や天候によって営業内容が変わる施設もあるため、出発前に各公式サイトで最新情報をご確認ください。
+                </div>
+            </div>
+        </section></main>
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item current" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="wrap">
+            OMODAKA｜一棟貸切の宿｜長野県岡谷市
+        </div>
+    </footer>
+</body>
+
+</html>

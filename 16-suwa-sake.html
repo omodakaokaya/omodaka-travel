@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>16｜諏訪の地酒を楽しむ｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            background-image: linear-gradient(90deg, rgba(5,8,7,0.52) 0%, rgba(5,8,7,0.38) 55%, rgba(5,8,7,0.20) 100%), url('https://nagano.onpara.jp/photo/1200000001/0/3750070.jpg');
+            background-position: center center, center center;
+            background-size: cover, 80% auto;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .hero .notice {
+            margin-top: 24px;
+            padding: 16px 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: #fff;
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .route-overview {
+            width: 100%;
+            margin: 0 0 18px;
+            padding: 21px;
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .route-overview h3 {
+            margin: 0 0 8px;
+            color: var(--ink)
+        }
+
+        .route-overview p {
+            margin: 0 0 12px;
+            color: #28332f
+        }
+
+        .route-overview .route-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px
+        }
+
+        .route-overview .route-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .photo-link {
+            margin: 18px 0 8px
+        }
+
+        .photo-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #c58a3a;
+            border-radius: 999px;
+            background: #c58a3a;
+            color: #111;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .18)
+        }
+
+        .photo-btn:hover {
+            background: #e0ad63;
+            border-color: #e0ad63
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5,8,7,0.52), rgba(5,8,7,0.35)), url('https://nagano.onpara.jp/photo/1200000001/0/3750070.jpg')
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+
+        /* Travel category navigation */
+        .travel-category-nav {
+            padding: 12px 0 46px;
+            background: #111715;
+            border-top: 1px solid #26302c
+        }
+
+        .travel-category-nav .nav-title {
+            margin: 0 0 18px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: .08em
+        }
+
+        .travel-category-nav .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px
+        }
+
+        .travel-category-nav .nav-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 8px 16px;
+            border: 1px solid #5a5142;
+            border-radius: 999px;
+            background: #1a211e;
+            color: #f1eee7;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.35;
+            transition: background .2s, border-color .2s, transform .2s
+        }
+
+        .travel-category-nav .nav-item:hover {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            transform: translateY(-1px)
+        }
+
+        .travel-category-nav .nav-item.current {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            font-weight: 700
+        }
+
+        .travel-category-nav .nav-home {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-home:hover {
+            background: #fff;
+            color: #111
+        }
+
+        .travel-category-nav .nav-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px
+        }
+
+        .travel-category-nav .nav-actions .nav-home {
+            margin-top: 0
+        }
+
+        .travel-category-nav .nav-actions .nav-stay {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-actions .nav-stay:hover {
+            background: #fff;
+            color: #111
+        }
+
+        @media(max-width:800px) {
+            .travel-category-nav {
+                padding: 10px 0 38px
+            }
+
+            .travel-category-nav .nav-grid {
+                gap: 8px
+            }
+
+            .travel-category-nav .nav-item {
+                font-size: 13px;
+                padding: 8px 13px
+            }
+
+            .travel-category-nav .nav-title {
+                font-size: 18px
+            }
+        }
+
+        /* Category navigation spacing adjustment */
+        .travel-category-nav {
+            padding-top: 0;
+        }
+
+        .hero+.travel-category-nav {
+            margin-top: 20px;
+        }
+
+        main+.travel-category-nav {
+            margin-top: -58px;
+        }
+    
+        .brewery-group {
+            margin-bottom: 42px
+        }
+
+        .brewery-note {
+            margin: 18px 0 24px;
+            padding: 18px 22px;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e5ebe7
+        }
+
+        .brewery-note strong {
+            color: #fff
+        }
+
+        .brewery-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            margin-top: 12px
+        }
+
+        .brewery-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .gokura-panel {
+            margin-top: 24px;
+            padding: 24px;
+            border: 1px solid #303b36;
+            border-radius: 14px;
+            background: #161d1a;
+            color: #e5ebe7
+        }
+
+        .gokura-panel h3 {
+            margin-top: 0;
+            color: #fff
+        }
+
+        .gokura-panel a {
+            color: #f0c27e;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .gokura-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 18px 0
+        }
+
+        .gokura-list span {
+            display: block;
+            padding: 12px 8px;
+            border: 1px solid #5a5142;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            background: #202923;
+            font-weight: 700
+        }
+
+        .hero .notice {
+            margin-top: 24px;
+            padding: 16px 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: #fff;
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        @media(max-width:800px) {
+            .gokura-list {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 80% auto !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <nav><div class="brand">OMODAKA</div></nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>16｜諏訪の地酒を楽しむ</h1>
+                <p class="lead">
+                    諏訪湖を囲む岡谷・下諏訪・上諏訪には、豊かな自然と酒造りの伝統に育まれた、個性豊かな地酒があります。各酒蔵では、信州産の米をはじめとする良質な酒米を使い、鉢伏山、和田峠、霧ヶ峰などの山々に育まれた伏流水を仕込み水として、それぞれの土地ならではの味わいを生み出しています。ここでは、岡谷の「高天」「神渡」、下諏訪の「御湖鶴」、そして上諏訪の「諏訪五蔵」を取り上げ、それぞれの酒蔵が大切にする酒造りや、銘柄ごとの味わいの特徴をご紹介します。
+                </p>
+                <div class="notice">
+                    <strong>諏訪地域の8つの銘柄を訪ねる</strong><br>
+                    岡谷・下諏訪の3蔵と、上諏訪の5蔵を紹介します。酒蔵での試飲・販売・見学の内容や営業時間は変更されることがありますので、お出かけ前に各公式サイトでご確認ください。
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item current" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="brewery-group">
+                    <div class="num">01｜岡谷・下諏訪の地酒</div>
+                    <h2 class="section-title">岡谷・下諏訪の酒蔵</h2>
+                    <p class="section-lead">OMODAKAのある岡谷市と、隣接する下諏訪町の酒蔵です。諏訪湖や諏訪の風土にちなんだ銘柄にも注目です。</p>
+                    <div class="detail-grid">
+                        <article class="detail">
+                            <h3>1．高天（髙天酒造・岡谷市）</h3>
+                            <p>明治4年（1871年）創業。「地元で愛される酒」を大切に、長野県産の酒造好適米を中心に、諏訪の自然に育まれた水と気候を生かし、諏訪杜氏の技で醸しています。定番商品に加えて季節限定品も販売し、有料試飲スペースもあります。OMODAKAの近くに酒蔵があり、ショップではショップ限定のお酒も購入できます。</p>
+                            <p class="meta">岡谷市銀座｜代表銘柄：髙天</p>
+                            <p class="source">公式サイト：<a href="https://koten-sake.co.jp/" target="_blank" rel="noopener">髙天酒造 公式サイト</a></p>
+                        </article>
+
+                        <article class="detail">
+                            <h3>2．神渡（豊島屋・岡谷市）</h3>
+                            <p>銘酒名は、冬の諏訪湖に現れる自然現象「御神渡り」に由来します。豊島屋では、出品酒から普通酒に至るまで長野県産米を使用し、仕込み水には鉢伏山の伏流水を用いています。伝統を受け継ぎながら、若い蔵人の感性も生かした酒造りを続けています。香りと味わいのバランスを大切にした、岡谷を代表する地酒です。</p>
+                            <p class="meta">岡谷市本町｜代表銘柄：神渡</p>
+                            <p class="source">公式サイト：<a href="https://jizake.miwatari.jp/" target="_blank" rel="noopener">神渡 公式サイト</a></p>
+                        </article>
+
+                        <article class="detail">
+                            <h3>3．御湖鶴（諏訪御湖鶴酒造場・下諏訪町）</h3>
+                            <p>大正初期に誕生し、長年にわたり地元で親しまれてきた下諏訪の地酒です。2017年に一度その歴史に幕を下ろしましたが、2018年に復活。旧酒蔵を改修して試験醸造を開始し、翌年には新たな酒蔵で本格的な酒造りを再開しました。仕込み水には、和田峠の「黒曜石水」を用いる伝統を受け継ぎながら、新たな御湖鶴として歩み続けています。</p>
+                            <p class="meta">下諏訪町御田町｜代表銘柄：御湖鶴</p>
+                            <p class="source">公式サイト：<a href="https://www.mikotsuru.com/" target="_blank" rel="noopener">御湖鶴 公式サイト</a></p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="brewery-group">
+                    <div class="num">02｜上諏訪の諏訪五蔵</div>
+                    <h2 class="section-title">甲州街道沿いに並ぶ五つの酒蔵</h2>
+                    <p class="section-lead">上諏訪駅近くの甲州街道沿い、約500mの範囲に「舞姫」「麗人」「本金」「横笛」「真澄」の五蔵が並んでいます。同じ諏訪の水と気候に育まれながら、それぞれ異なる個性の酒を醸しています。</p>
+
+                    <div class="detail-grid">
+                        <article class="detail">
+                            <h3>4．真澄（宮坂醸造・諏訪市）</h3>
+                            <p>寛文2年（1662年）創業。真澄は、現在全国で広く使われる「協会七号酵母」発祥の蔵として知られています。長野県産を中心に産地や品種の明確な酒米を選び、諏訪蔵では霧ヶ峰山系の伏流水を仕込み水に使用。米・水・酵母に向き合う丁寧な酒造りが特徴です。</p>
+                            <p class="meta">諏訪市元町｜代表銘柄：真澄</p>
+                            <p class="source">公式サイト：<a href="https://www.masumi.co.jp/product/" target="_blank" rel="noopener">真澄 商品紹介</a></p>
+                        </article>
+
+                        <article class="detail">
+                            <h3>5．本金（酒ぬのや本金酒造・諏訪市）</h3>
+                            <p>宝暦6年（1756年）創業。家族を中心とする小さな酒蔵で、手間を惜しまず、飲む人の笑顔につながる酒造りを続けています。看板商品の「太一」は、長年蔵を支えた杜氏の名を冠した、すっきりとした辛口。本金の純米酒・純米吟醸は、食事を引き立てる穏やかで透明感のある味わいが特徴です。</p>
+                            <p class="meta">諏訪市諏訪｜代表銘柄：本金・太一</p>
+                            <p class="source">公式サイト：<a href="https://honkin.net/" target="_blank" rel="noopener">酒ぬのや本金 公式サイト</a></p>
+                        </article>
+
+                        <article class="detail">
+                            <h3>6．舞姫（株式会社舞姫・諏訪市）</h3>
+                            <p>明治27年（1894年）に諏訪で酒造りを開始。「顔の見える酒づくり」を掲げ、契約栽培米を育てる農家と連携し、米づくりから酒造りまで大切にしています。五味の調和した旨口の酒を目指し、氷点下での瓶貯蔵によって、フレッシュな味わいを届ける工夫も行っています。「信州舞姫」「翠露」などの銘柄があります。</p>
+                            <p class="meta">諏訪市諏訪｜代表銘柄：信州舞姫・翠露</p>
+                            <p class="source">公式サイト：<a href="https://maihime.co.jp/" target="_blank" rel="noopener">舞姫 公式サイト</a></p>
+                        </article>
+
+                        <article class="detail">
+                            <h3>7．麗人（麗人酒造・諏訪市）</h3>
+                            <p>寛政元年（1789年）創業、二百年以上の歴史を持つ酒蔵です。厳選した長野県産の酒米と霧ヶ峰の伏流水を使い、諏訪の風土を生かした酒造りを続けています。代表銘柄「麗人」のほか、すっきりとした辛口の吟醸酒など、日々の食事や晩酌に合わせやすい酒を展開しています。</p>
+                            <p class="meta">諏訪市諏訪｜代表銘柄：麗人</p>
+                            <p class="source">公式サイト：<a href="https://reijin.biz/?mode=f1" target="_blank" rel="noopener">麗人酒造 公式サイト</a></p>
+                        </article>
+
+                        <article class="detail">
+                            <h3>8．横笛（伊東酒造・諏訪市）</h3>
+                            <p>長野県産の酒造好適米「美山錦」や「山田錦」を選び、霧ヶ峰の伏流水を使って醸しています。もろみを低温でじっくり発酵させ、酒本来の香りと味わいを引き出す、手仕事を大切にした酒造りが特徴です。銘柄名「横笛」は、平安時代の悲恋物語に登場する女性の名に由来しています。</p>
+                            <p class="meta">諏訪市諏訪｜代表銘柄：横笛</p>
+                            <p class="source">公式サイト：<a href="https://www.yokobue.co.jp/" target="_blank" rel="noopener">横笛 公式サイト</a></p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="gokura-panel">
+                    <div class="num">03｜上諏訪の酒蔵めぐり</div>
+                    <h2 class="section-title">諏訪五蔵めぐりを楽しむ</h2>
+                    <p>上諏訪の甲州街道沿い、約500mの範囲に集まる五つの酒蔵を歩いて巡ります。「ごくらくセット」を購入し、各蔵で4～5種類（各約20ml）の試飲を楽しむスタイルで、所要時間の目安は約1時間半。自分のペースで五蔵を訪ねられます。</p>
+                    <div class="gokura-list">
+                        <span>舞姫</span>
+                        <span>麗人</span>
+                        <span>本金</span>
+                        <span>横笛</span>
+                        <span>真澄</span>
+                    </div>
+                    <p>「ごくらくセット」には、五蔵での試飲または持ち帰り用カップ酒、オリジナルグラス、巾着袋、各蔵のステッカーなどが含まれます。酒蔵めぐりは蔵見学ではなく、試飲を楽しみながら街道を歩く企画です。料金・内容・営業日などは変更される場合がありますので、お出かけ前に公式案内をご確認ください。</p>
+                    <div class="brewery-links">
+                        <a href="https://nomiaruki.com/" target="_blank" rel="noopener">諏訪五蔵めぐり 公式案内</a>
+                        
+                    </div>
+                </div>
+
+                <div class="notice">
+                    <strong>酒蔵を訪ねる際のお願い</strong><br>
+                    試飲をされる場合は、公共交通機関やタクシーをご利用ください。飲酒運転は法律で禁止されています。お酒は20歳になってから、適量をお楽しみください。酒蔵の見学・試飲・販売の可否や営業時間は、事前に各蔵へご確認ください。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+        <div class="wrap">
+            <h2 class="nav-title">他のテーマページへ</h2>
+            <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item current" href="16-suwa-sake.html">諏訪の地酒</a></div>
+            <div class="nav-actions">
+                <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">OMODAKA｜一棟貸切の宿｜長野県岡谷市</div>
+    </footer>
+</body>
+</html>

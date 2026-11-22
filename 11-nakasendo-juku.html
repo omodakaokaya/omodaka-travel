@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>11｜中山道の宿場町を訪ねる｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        /* Page 11: narrow only the hero text line width; preserve all background-image settings. */
+        main > .hero > .wrap {
+            width: min(1000px, calc(100% - 44px));
+            max-width: 1000px;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            background-image: linear-gradient(90deg, rgba(5, 8, 7, 0.65) 0%, rgba(5, 8, 7, 0.50) 48%, rgba(5, 8, 7, 0.30) 100%), url('https://s3-ap-northeast-1.amazonaws.com/thegate/2019/06/17/13/17/21/Narai-juku-streets.jpg');
+            background-size: cover, 75% 90%;
+            background-position: center center, center center;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 16px 20px;
+            border: 1px solid #5a5142;
+            border-radius: 12px;
+            background: #161d1a;
+            color: #e8ece9
+        }
+
+        .notice strong {
+            color: #fff
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .route-overview {
+            width: 100%;
+            margin: 0 0 18px;
+            padding: 21px;
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .route-overview h3 {
+            margin: 0 0 8px;
+            color: var(--ink)
+        }
+
+        .route-overview p {
+            margin: 0 0 12px;
+            color: #28332f
+        }
+
+        .route-overview .route-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px
+        }
+
+        .route-overview .route-links a {
+            color: #8b5e20;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .photo-link {
+            margin: 18px 0 8px
+        }
+
+        .photo-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #c58a3a;
+            border-radius: 999px;
+            background: #c58a3a;
+            color: #111;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .18)
+        }
+
+        .photo-btn:hover {
+            background: #e0ad63;
+            border-color: #e0ad63
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5, 8, 7, 0.65), rgba(5, 8, 7, 0.42)), url('https://s3-ap-northeast-1.amazonaws.com/thegate/2019/06/17/13/17/21/Narai-juku-streets.jpg');
+                background-size: cover, 75% 90%;
+                background-position: center center, center center;
+                background-repeat: no-repeat, no-repeat
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+
+        /* Travel category navigation */
+        .travel-category-nav {
+            padding: 12px 0 46px;
+            background: #111715;
+            border-top: 1px solid #26302c
+        }
+
+        .travel-category-nav .nav-title {
+            margin: 0 0 18px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: .08em
+        }
+
+        .travel-category-nav .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px
+        }
+
+        .travel-category-nav .nav-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 8px 16px;
+            border: 1px solid #5a5142;
+            border-radius: 999px;
+            background: #1a211e;
+            color: #f1eee7;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.35;
+            transition: background .2s, border-color .2s, transform .2s
+        }
+
+        .travel-category-nav .nav-item:hover {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            transform: translateY(-1px)
+        }
+
+        .travel-category-nav .nav-item.current {
+            background: #c58a3a;
+            border-color: #c58a3a;
+            color: #111;
+            font-weight: 700
+        }
+
+        .travel-category-nav .nav-home {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-home:hover {
+            background: #fff;
+            color: #111
+        }
+
+        .travel-category-nav .nav-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px
+        }
+
+        .travel-category-nav .nav-actions .nav-home {
+            margin-top: 0
+        }
+
+        .travel-category-nav .nav-actions .nav-stay {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #8b806e;
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .travel-category-nav .nav-actions .nav-stay:hover {
+            background: #fff;
+            color: #111
+        }
+
+        @media(max-width:800px) {
+            .travel-category-nav {
+                padding: 10px 0 38px
+            }
+
+            .travel-category-nav .nav-grid {
+                gap: 8px
+            }
+
+            .travel-category-nav .nav-item {
+                font-size: 13px;
+                padding: 8px 13px
+            }
+
+            .travel-category-nav .nav-title {
+                font-size: 18px
+            }
+        }
+
+        /* Category navigation spacing adjustment */
+        .travel-category-nav {
+            padding-top: 0;
+        }
+
+        .hero+.travel-category-nav {
+            margin-top: 20px;
+        }
+
+        main+.travel-category-nav {
+            margin-top: -58px;
+        }
+    
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 75% 90% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+
+<style id="omd-11-hero-expanded-transparent">
+/* Page 11: expand the hero to show all three text sections */
+main > .hero {
+    height: auto !important;
+    min-height: 700px !important;
+    max-height: none !important;
+    padding: 64px 0 58px !important;
+    overflow: visible !important;
+    background-size: cover, 75% 90% !important;
+    background-position: center center, center center !important;
+    background-repeat: no-repeat, no-repeat !important;
+}
+main > .hero .notice {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-top: 18px !important;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        padding: 54px 0 48px !important;
+        background-size: cover, 75% 90% !important;
+    }
+}
+</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>11｜中山道と初期中山道の宿場町を巡る</h1>
+                <p class="lead">
+                    江戸と京都を結んだ中山道。OMODAKAから和田宿・下諏訪宿を経て木曽路へ入り、古い町並みが残る宿場町を訪ねます。妻籠宿・馬籠宿まで、日帰りで楽しめる中山道の旅をご紹介します。
+                </p>
+                <p class="lead">
+                    実は、OMODAKAの周辺には、江戸時代初期の中山道である「初期中山道」が通っていました。慶長6年（1601年）に整備されたこの街道は、下諏訪から岡谷・三沢を経て小野宿、さらに木曽方面へと続き、約十数年間、中山道の本道として使われました。その後、塩尻峠を越える現在のルートに変更されました。OMODAKA前面の県道下諏訪・辰野線もその街道筋にあたり、江戸時代初期には、まさにこの場所が江戸と京都を結ぶ幹線街道沿いだったのです。
+                </p>
+                <div class="notice">
+                    <strong>OMODAKAから訪ねやすい10の宿場町を選びました。</strong><br>
+                    初期中山道の小野宿と、現在の中山道沿いに残る宿場町をご紹介します。所要時間は交通状況などによって変わりますので、出発前にルートをご確認ください。
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item current" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank"
+                        rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <article class="route-overview">
+                    <h3>0. 中山道・初期中山道の道筋</h3>
+                    <p>中山道と初期中山道の道筋をご紹介します。OMODAKAの前面道路が、かつて初期中山道の街道筋であったことを確認できる資料です。</p>
+                    <div class="route-links">
+                        <a href="https://kaidotrail.github.io/nakasendo.html?z=15&amp;lat=36.0693398152167&amp;lng=138.05934906005862"
+                            target="_blank" rel="noopener">中山道69次＋初期中山道</a>
+                        <a href="https://www.kanko-okaya.jp/wp/wp-content/uploads/2019/08/270c7f69ae0ed53ab3c2c6da4a9c2ed1.pdf?utm_source=chatgpt.com"
+                            target="_blank" rel="noopener">ゆっくり歩こう初期中山道</a>
+                    </div>
+                </article>
+
+                <div class="detail-grid">
+                    <article class="detail">
+                        <h3>1．和田宿</h3>
+                        <p>中山道の最高地点・和田峠を控えた宿場町です。峠越えに備えて多くの旅人や大名が休息した重要な宿場で、旧道沿いには和田宿本陣、歴史の道資料館かわちや、大黒屋などが残り、往時の宿場町の雰囲気を今に伝えています。
+                        </p>
+                        <p class="meta">長和町｜OMODAKAから車で約35分</p>
+                        <p class="source">公式情報：<a href="https://www.nagawa.info/touch/" target="_blank"
+                                rel="noopener">信州・長和町観光協会「和田宿」</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>2．下諏訪宿</h3>
+                        <p>中山道と甲州街道が合流する、交通の要衝として栄えた宿場町です。中山道六十九次の29番目にあたり、温泉が湧く宿場として多くの旅人を迎えました。本陣跡や宿場街道資料館などを巡りながら、諏訪大社下社の門前町としての歴史にも触れられます。
+                        </p>
+                        <p class="meta">下諏訪町｜OMODAKAから車で約12分</p>
+                        <p class="source">紹介記事：<a href="https://shimosuwaonsen.jp/sightseeing/"
+                                target="_blank" rel="noopener">下諏訪観光協会「下諏訪宿・観光名所」</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>3．小野宿</h3>
+                        <p>初期中山道の宿場として開かれ、その後は中山道の塩尻宿から伊那・飯田方面へ通じる伊那街道の宿場として栄えました。現在も当時の面影を残す建物が保存されています。岡谷から近く、気軽に宿場町の雰囲気を味わえるのが魅力です。
+                        </p>
+                        <p class="meta">辰野町｜OMODAKAから国道20号線→塩嶺王城パークライン経由、車で約25分。しだれ栗森林公園から小野宿までは初期中山道の道筋を辿ります。</p>
+                        <p class="source">自治体サイト：<a
+                                href="https://www.town.tatsuno.lg.jp/gyosei/soshiki/sangyoshinkoka/kankosite/4/1219.html"
+                                target="_blank" rel="noopener">辰野町「小野宿」</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>4．本山宿</h3>
+                        <p>松本平の出口、木曽路の入口として栄えた宿場町です。出格子の二階建ての家々が並び、幕末から明治期の建物が宿場時代の面影を伝えています。また、江戸時代の文献にも記された「蕎麦切り発祥の地」としても知られています。
+                        </p>
+                        <p class="meta">塩尻市｜OMODAKAから国道19号線経由、車で約35分</p>
+                        <p class="source">観光情報：<a href="https://tokimeguri.jp/guide/motoyamajuku/" target="_blank"
+                                rel="noopener">塩尻市観光協会「中山道 本山宿」</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>5．奈良井宿</h3>
+                        <p>中山道のほぼ中央に位置し、木曽路を代表する宿場町です。奈良井川に沿って約1kmにわたり町並みが続き、「奈良井千軒」と呼ばれるほど栄えました。重要伝統的建造物群保存地区に選定され、江戸時代の面影を色濃く残しています。
+                        </p>
+                        <p class="meta">塩尻市｜OMODAKAから国道19号線経由、車で約50分</p>
+                        <p class="source">公式サイト：<a href="https://www.naraijuku.com/" target="_blank"
+                                rel="noopener">奈良井宿観光協会</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>6．福島宿</h3>
+                        <p>木曽谷の中心に位置し、江戸時代には福島関所が置かれた重要な宿場町です。関所跡や山村代官屋敷などの歴史遺産に加え、上の段地区には千本格子や土蔵などを残す町並みがあり、木曽福島の宿場町としての歴史を感じることができます。
+                        </p>
+                        <p class="meta">木曽町｜OMODAKAから国道19号線経由、車で約1時間15分</p>
+                        <p class="source">観光情報：<a href="https://www.town-kiso.com/manabu/rekishi/100340/100983/"
+                                target="_blank" rel="noopener">街並みネット「福島宿」</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>7．上松宿</h3>
+                        <p>木曽ヒノキの産地として栄えた宿場町です。大火などで失われた場所もありますが、上町には江戸時代の面影を残す建物があり、木曽の桟などの史跡も残されています。宿場散策と「寝覚の床」などの周辺名所を組み合わせて訪ねるのもおすすめです。
+                        </p>
+                        <p class="meta">上松町｜OMODAKAから国道19号線経由、車で約1時間25分</p>
+                        <p class="source">観光情報：<a
+                                href="https://kiso-hinoki.jp/colibri-wp/tourist/%E4%B8%AD%E5%B1%B1%E9%81%93/"
+                                target="_blank" rel="noopener">上松町観光サイト「中山道」</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>8．須原宿</h3>
+                        <p>木曽川の氾濫を受けて現在地へ移された、木曽路の中では比較的新しい宿場町です。宿場の中央を用水路が流れ、軒先には「水舟」が置かれています。枡形の坂道や「く」の字に曲がる道なども残り、落ち着いた木曽路の宿場町を歩くことができます。
+                        </p>
+                        <p class="meta">大桑村｜OMODAKAから国道19号線経由、車で約1時間40分</p>
+                        <p class="source">長野県木曽地域振興局ブログ：<a href="https://www.vill.okuwa.lg.jp/kanko/miru-asobu/nakasendoshukuba/plays_suhara.html"
+                                target="_blank" rel="noopener">「是より木曽路」木曽路を歩く⑮（須原宿）</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>9．妻籠宿</h3>
+                        <p>中山道と伊那街道が交わる交通の要衝として栄えた宿場町です。全国に先駆けて町並み保存運動が行われ、「売らない・貸さない・こわさない」の原則のもと、江戸時代の宿場景観が守られてきました。重要伝統的建造物群保存地区に選定されています。
+                        </p>
+                        <p class="meta">南木曽町｜OMODAKAから中央道経由、車で約1時間40分</p>
+                        <p class="source">公式サイト：<a href="https://tsumago.jp/" target="_blank"
+                                rel="noopener">妻籠宿公式ウェブサイト</a></p>
+                    </article>
+
+                    <article class="detail">
+                        <h3>10．馬籠宿</h3>
+                        <p>中山道43番目の宿場で、石畳の坂道に沿って町並みが続く、全国的にも珍しい「坂の宿場町」です。島崎藤村の生誕地としても知られ、宿場内の藤村記念館では『夜明け前』など藤村ゆかりの資料を見ることができます。
+                        </p>
+                        <p class="meta">岐阜県中津川市｜OMODAKAから中央道経由、車で約1時間30分</p>
+                        <p class="source">自治体サイト：<a href="https://www.city.nakatsugawa.lg.jp/soshikikarasagasu/kankoka/5/2/756.html"
+                                target="_blank" rel="noopener">中津川市「馬籠宿」</a></p>
+                    </article>
+                </div>
+
+                <div class="route">
+                    <strong>OMODAKAから中山道をたどる日帰り旅</strong><br>
+                    OMODAKAから近い和田宿・下諏訪宿・小野宿は手軽に訪問できます。本山宿を経て木曽路へ、そして奈良井宿、福島宿、上松宿、須原宿と国道19号線を南下する行程も日帰り可能です。妻籠宿・馬籠宿は中央道経由で日帰りで訪ねることができます。気になる宿場を選んで、自由に訪問行程をお作りください。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+        <div class="wrap">
+            <h2 class="nav-title">他のテーマページへ</h2>
+            <div class="nav-grid">
+                <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item current" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+            <div class="nav-actions">
+                <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            OMODAKA｜一棟貸切の宿｜長野県岡谷市
+        </div>
+    </footer>
+</body>
+
+</html>

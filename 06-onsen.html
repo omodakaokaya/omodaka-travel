@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>06｜温泉を楽しむ｜OMODAKA</title>
+    <style>
+        :root {
+            --bg: #0b0f0e;
+            --bg2: #111715;
+            --card: #fff;
+            --ink: #17201d;
+            --muted: #d9e0dc;
+            --line: #2a3531;
+            --gold: #c58a3a;
+            --gold2: #e0ad63;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+            color: var(--muted);
+            background: var(--bg);
+            line-height: 1.8
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(8, 11, 10, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #26302c;
+            z-index: 5;
+            color: #fff
+        }
+
+        nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .16em
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 14px
+        }
+
+        .navlinks a {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 0;
+            background: #101614;
+            --hero-photo: url('https://image.jimcdn.com/app/cms/image/transf/dimension%3D4096x4096%3Aformat%3Djpg/path/s271caf473bc0f55a/image/i8584e642b1c7e8dc/version/1642739675/image.jpg');
+            background-image: linear-gradient(90deg, rgba(5, 8, 7, 0.50) 0%, rgba(5, 8, 7, 0.35) 42%, rgba(5, 8, 7, 0.19) 100%), var(--hero-photo);
+            background-size: cover, 80% auto;
+            background-position: center center, center center;
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08)
+        
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat, no-repeat;}
+
+        .eyebrow {
+            letter-spacing: .18em;
+            font-size: 12px;
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 64px);
+            line-height: 1.12;
+            margin: 8px 0;
+            color: #fff
+        }
+.lead {
+            font-size: 19px;
+            max-width: none;
+            color: #fff
+        }
+.lead strong {
+            color: #fff
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            text-decoration: none;
+            margin-top: 8px;
+            color: #fff;
+            background: rgba(0, 0, 0, .18)
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #111
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin: 0 0 8px;
+            color: #fff
+        }
+.section-lead {
+            max-width: none;
+            margin-bottom: 25px;
+            color: #d9e0dc
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card,
+        .detail {
+            background: var(--card);
+            color: var(--ink);
+            border: 1px solid #e3e0d8;
+            border-radius: 15px;
+            padding: 21px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+        }
+
+        .card h3,
+        .detail h3 {
+            margin: 4px 0 8px;
+            color: var(--ink)
+        }
+
+        .detail {
+            margin-bottom: 18px
+        }
+
+        .detail p {
+            color: #28332f
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #5c6863 !important
+        }
+
+        .source {
+            font-size: 18px;
+            color: #79521f !important;
+            font-weight: 700;
+            margin-top: 14px
+        }
+
+        .source a {
+            color: #8b5e20;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
+
+        .route {
+            background: #161d1a;
+            border: 1px solid #303b36;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            color: #fff
+        }
+
+        .route strong {
+            color: #fff
+        }
+
+        .num {
+            color: var(--gold2);
+            letter-spacing: .14em;
+            font-size: 12px
+        }
+
+        .back {
+            margin: 25px 0
+        }
+
+        .photo {
+            display: none
+        }
+
+        .section-title:before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 1.05em;
+            background: var(--gold);
+            margin-right: 12px;
+            vertical-align: -.12em;
+            border-radius: 3px
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #26302c;
+            color: #9ba7a1;
+            font-size: 12px;
+            background: #080b0a
+        }
+
+        footer .wrap {
+            color: #9ba7a1
+        }
+
+        @media(max-width:800px) {
+
+            .grid,
+            .detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 60px 0 55px;
+                background-image: linear-gradient(180deg, rgba(5, 8, 7, 0.50), rgba(5, 8, 7, 0.32)), var(--hero-photo)
+            }
+.lead {
+                font-size: 17px
+            }
+
+            .section-title {
+                font-size: 26px
+            }
+        }
+    
+/* Travel category navigation */
+.travel-category-nav{padding:12px 0 46px;background:#111715;border-top:1px solid #26302c}
+.travel-category-nav .nav-title{margin:0 0 18px;text-align:center;color:#fff;font-size:20px;letter-spacing:.08em}
+.travel-category-nav .nav-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.travel-category-nav .nav-item{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:1px solid #5a5142;border-radius:999px;background:#1a211e;color:#f1eee7;text-decoration:none;font-size:14px;line-height:1.35;transition:background .2s,border-color .2s,transform .2s}
+.travel-category-nav .nav-item:hover{background:#c58a3a;border-color:#c58a3a;color:#111;transform:translateY(-1px)}
+.travel-category-nav .nav-item.current{background:#c58a3a;border-color:#c58a3a;color:#111;font-weight:700}
+.travel-category-nav .nav-home{display:inline-block;margin-top:12px;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-home:hover{background:#fff;color:#111}
+.travel-category-nav .nav-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.travel-category-nav .nav-actions .nav-home{margin-top:0}
+.travel-category-nav .nav-actions .nav-stay{display:inline-block;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-actions .nav-stay:hover{background:#fff;color:#111}
+
+@media(max-width:800px){.travel-category-nav{padding:10px 0 38px}.travel-category-nav .nav-grid{gap:8px}.travel-category-nav .nav-item{font-size:13px;padding:8px 13px}.travel-category-nav .nav-title{font-size:18px}}
+
+/* Category navigation spacing adjustment */
+.travel-category-nav {
+    padding-top: 0;
+}
+/* Add spacing between the introductory content and the upper navigation block. */
+.hero + .travel-category-nav {
+    margin-top: 20px;
+}
+main + .travel-category-nav {
+    margin-top: -58px;
+}
+
+/* OMODAKA hero image and height normalization (reference: 02-activity) */
+.hero {
+    min-height: 420px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover, 80% auto !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: center center, center center !important;
+}
+@media (max-width: 800px) {
+    .hero { min-height: 420px !important; }
+}
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>06｜温泉を楽しむ</h1>
+                <p class="lead">
+                    OMODAKAから車で約5～15分の範囲には、歴史ある温泉建築から地元の日帰り温泉まで、バラエティ豊かな温泉施設があります。複数のご家族やグループでOMODAKAをご利用の際には、ぜひ温泉巡りもお楽しみください。特に中山道の宿場町として栄えた下諏訪には、数多くの日帰り温泉があります。宿場町の情緒に浸りながら、いくつもの温泉を巡る「温泉ホッピング」を楽しむのもおすすめです。
+                </p>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item current" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="detail-grid">
+                    <article class="detail">
+                        <h3>片倉館・千人風呂（上諏訪）</h3>
+                        <p>昭和3年竣工の国指定重要文化財の洋風建築と、当時から受け継がれる天然温泉「千人風呂」を楽しめる、諏訪を代表する名所です。大理石造りの浴槽は約100人が一度に入浴できる広さで、玉砂利を敷き詰めた深さ1.1mの浴槽は、他に類を見ない独特の造りです。館内には、贅沢に配されたステンドグラスや彫刻、さまざまな装飾が施され、建築そのものも見どころとなっています。
+                            片倉館は、昭和初期に生糸産業で財を成した片倉財閥によって、地域住民の厚生と娯楽のために建設されました。当時、生糸生産に従事していた工女（女工）たちも利用した施設です。温泉は無色・無臭の単純温泉で、泉質は低張性弱アルカリ性の高温泉です。
+                        </p>
+                        <p class="meta">OMODAKAから車約15分</p>
+                        <p class="source">公式サイト：<a href="http://www.katakurakan.or.jp/natural_hot_spring/"
+                                target="_blank" rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>おかや温泉 美肌の湯 ロマネット（岡谷）</h3>
+                        <p>OMODAKAから車で約5分の日帰り温泉施設で、ローマ風呂をイメージした円形の大浴槽が特徴です。浴槽には源泉100％の岡谷温泉を加水せずに使用しており、湯温は約42℃とやや熱め。浴槽の底には玉石が敷き詰められ、足裏への心地よい刺激を感じながら、ゆったりと入浴できます。泉質は単純温泉（弱アルカリ性低張性高温泉）で、pH8.03。美肌成分とされるメタケイ酸を129.8mg含み、炭酸水素イオンも豊富なことから、つるつるとした肌触りが特徴の「美肌の湯」として親しまれています。また、諏訪地域では数少ないフィンランドサウナを備え、ロウリュも楽しめます。
+                        </p>
+                        <p class="meta">OMODAKAから車5分</p>
+                        <p class="source">公式サイト：<a href="https://okaya-romanet.jp/" target="_blank"
+                                rel="noopener">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>諏訪湖ハイツ 日帰り温泉（岡谷）</h3>
+                        <p>OMODAKAから車で約5分、ロマネットの近く、諏訪湖畔にある「おかや総合福祉センター
+                            諏訪湖ハイツ」の日帰り温泉です。浴場からは諏訪湖を望むことができ、湖畔の景色を眺めながらゆったりと入浴できます。温泉は単純温泉（弱アルカリ性）で、透明感のある褐色のお湯が特徴。肌に触れるとつるつるとした感触があり、やわらかな湯ざわりを味わえます。諏訪湖畔の散策や観光の途中に、気軽に立ち寄れる温泉です。また、屋外には無料の足湯があり、諏訪湖を眺めながら気軽に温泉に浸かることができます。天気のよい日には富士山を望むこともあり、湖畔散策の途中の休憩スポットとしてもおすすめです。
+                        </p>
+                        <p class="meta">OMODAKAから車5分</p>
+                        <p class="source">紹介ページ：<a href="https://yuru-to.net/detail.php?oid=6513" target="_blank"
+                                rel="noopener">公式案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>下諏訪温泉 湖畔の湯（下諏訪）</h3>
+                        <p>OMODAKAから車で約10分、諏訪湖畔に湧く下諏訪温泉の公衆浴場です。源泉かけ流しの温泉で、広々とした内湯と露天風呂の両方を楽しめます。泉温は約42℃とやや熱め。諏訪湖畔の散策と合わせて、気軽に立ち寄れる温泉です。
+                        </p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">公式案内：<a href="https://shimosuwaonsen.jp/spa/1038/" target="_blank"
+                                rel="noopener">下諏訪温泉公式案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>下諏訪温泉 旦過の湯（たんがのゆ）</h3>
+                        <p>OMODAKAから車で約10分、下諏訪の温泉街にある、露天風呂と高温湯が人気の共同浴場です。泉質は低張性アルカリ性高温泉で、無色透明の湯が特徴。ナトリウム・カルシウム－硫酸塩・塩化物温泉で、源泉かけ流しの温泉を味わえます。最大の特徴は、下諏訪温泉の中でも特に熱い湯であること。内湯には「やや熱い湯」と「熱い湯」があり、約45～47℃とかなり高温です。一方、露天風呂は約42℃で、比較的入りやすい温度になっています。熱い湯が好きな方にはぜひ挑戦していただきたい下諏訪ならではの共同浴場です。
+                        </p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">公式案内：<a href="https://shimosuwaonsen.jp/spa/5044/" target="_blank"
+                                rel="noopener">下諏訪温泉公式案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>下諏訪温泉 菅野温泉（下諏訪）</h3>
+                        <p>OMODAKAから車で約10分、下諏訪の中心街にある明治19年創業の歴史ある公衆浴場です。アーケードを抜けて入る昔ながらの佇まいは、まるで昭和の銭湯にタイムスリップしたようなレトロな雰囲気。浴室中央には特徴的な楕円形の浴槽があり、昔ながらの共同浴場の風情を味わえます。泉質はナトリウム・カルシウム－硫酸塩・塩化物温泉。無色透明でやわらかな湯ざわりの源泉かけ流しで、湯温は約42～43℃と、下諏訪温泉の中では比較的入りやすい温度です。諏訪大社下社秋宮にも近く、下諏訪の宿場町を散策した後に立ち寄るのもおすすめです。
+                        </p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">公式案内：<a href="https://shimosuwaonsen.jp/spa/1035/" target="_blank"
+                                rel="noopener">下諏訪温泉公式案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>下諏訪温泉 矢木温泉（下諏訪）</h3>
+                        <p>OMODAKAから車で約10分、下諏訪の温泉街にある、地元の人々に親しまれている昔ながらの共同浴場です。浴室はシンプルな造りですが、たっぷりとした湯量の温泉が広めの浴槽に注がれ、ゆったりと入浴できます。泉質はナトリウム－塩化物・硫酸塩温泉で、無色透明のなめらかな湯ざわりが特徴。pH8.19の弱アルカリ性で、肌がややスベスベするような浴感があります。湯温は約42℃に調整し、循環させずにかけ流しで使用しています。設備は素朴ですが、地元の人たちと同じ湯に浸かりながら、下諏訪温泉の日常的な雰囲気を味わえるのが魅力です。下諏訪の宿場町散策や諏訪大社下社参拝と合わせて、気軽に立ち寄ってみたい共同浴場です。
+                        </p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">公式案内：<a href="https://shimosuwaonsen.jp/spa/1039/" target="_blank"
+                                rel="noopener">下諏訪温泉公式案内</a></p>
+                    </article>
+                    <article class="detail">
+                        <h3>下諏訪温泉 遊泉ハウス児湯（下諏訪）</h3>
+                        <p>OMODAKAから車で約10分、下諏訪の温泉街にある日帰り温泉施設です。江戸時代中期以前から旅人に親しまれてきた「綿の湯」と、子宝に恵まれる湯として知られた「児湯」の跡地に、昭和62年に建てられました。諏訪大社下社秋宮にも近く、下諏訪の温泉巡りに立ち寄りやすい共同浴場です。温泉は「綿の湯源泉」と「旦過第一源泉」の混合泉で、泉質は単純温泉。無色透明のやわらかな湯ざわりが特徴で、内湯と露天風呂の両方で温泉を味わえます。内湯は約43℃とかなり熱めで、熱い湯が好きな方には特におすすめです。露天風呂は約42℃で、内湯より少し入りやすい温度になっています。
+                        </p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">公式案内：<a href="https://shimosuwaonsen.jp/spa/1040/" target="_blank"
+                                rel="noopener">下諏訪温泉公式案内</a></p>
+                    </article>
+                </div>
+                <article class="detail"
+                    style="grid-column:1/-1;background:linear-gradient(135deg,#f4eee6,#eef3ee);border-color:#d8d8cd;">
+                    <h2 style="margin:0 0 8px;color:#24312c;">蓼科・八ヶ岳・原村・富士見の日帰り温泉</h2>
+                    <p>蓼科、八ヶ岳、入笠山山麓には、個性豊かな高原日帰り温泉施設が多く点在しています。蓼科・八ヶ岳山麓、富士見エリアの観光・レジャースポットを楽しんだ後、OMODAKAへの帰途にお立ち寄りすれば旅の思い出が膨らみます。
+                    </p>
+                    <div class="grid" style="margin-top:20px;">
+                        <article class="card">
+                            <div class="num">01</div>
+                            <h3>蓼科温泉 小斉の湯（蓼科）</h3>
+                            <p class="meta">内湯、露天風呂、休憩室<br>入浴料600円</p>
+                            <p class="source"><a
+                                    href="https://www.jalan.net/kankou/spt_guide000000152567/?screenId=OUW3701"
+                                    target="_blank" rel="noopener">施設情報</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">02</div>
+                            <h3>湯川温泉 河童の湯（茅野・蓼科）</h3>
+                            <p class="meta">内湯、露天風呂、休憩室、ジャグジー<br>入浴料600円</p>
+                            <p class="source"><a href="https://www.lcv.ne.jp/~yugawa/kappa.htm" target="_blank"
+                                    rel="noopener">施設情報</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">03</div>
+                            <h3>米沢温泉 塩壺の湯（茅野・蓼科）</h3>
+                            <p class="meta">内湯、冷泉風呂、サウナ、ミストサウナ、休憩室<br>入浴料600円</p>
+                            <p class="source"><a href="https://www.city.chino.lg.jp/life/5/40/206/"
+                                    target="_blank" rel="noopener">自治体サイト</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">04</div>
+                            <h3>尖石温泉 縄文の湯（茅野・蓼科・八ヶ岳）</h3>
+                            <p class="meta">内湯、露天風呂、サウナ、休憩室<br>入浴料600円</p>
+                            <p class="source"><a href="https://www.city.chino.lg.jp/life/5/40/206/"
+                                    target="_blank" rel="noopener">自治体サイト</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">05</div>
+                            <h3>河原温泉 河原の湯（茅野・蓼科・八ヶ岳）</h3>
+                            <p class="meta">内湯、サウナ、休憩室、カフェ<br>入浴料600円</p>
+                            <p class="source"><a href="https://www.city.chino.lg.jp/life/5/40/206/"
+                                    target="_blank" rel="noopener">自治体サイト</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">06</div>
+                            <h3>尖石の湯（茅野・蓼科・八ヶ岳）</h3>
+                            <p class="meta">内湯、野天岩風呂、休憩室<br>入浴料1,300円</p>
+                            <p class="source"><a href="https://www.togariishinoyu.com/" target="_blank"
+                                    rel="noopener">公式サイト</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">07</div>
+                            <h3>もみの湯（原村・八ヶ岳）</h3>
+                            <p class="meta">源泉かけ流し、内湯、露天風呂、休憩室<br>入浴料650円</p>
+                            <p class="source"><a href="https://www.vill.hara.lg.jp/sightseeing/facility/61047.html"
+                                    target="_blank" rel="noopener">自治体サイト</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">08</div>
+                            <h3>金沢温泉 金鶏の湯（茅野・国道20号線）</h3>
+                            <p class="meta">内湯、サウナ、休憩<br>入浴料600円</p>
+                            <p class="source"><a href="https://www.city.chino.lg.jp/life/5/40/206/"
+                                    target="_blank" rel="noopener">自治体サイト</a></p>
+                        </article>
+                        <article class="card">
+                            <div class="num">09</div>
+                            <h3>ゆーとろん 水神の湯（富士見町・国道20号線）</h3>
+                            <p class="meta">源泉かけ流し、内湯、露天風呂、休憩室、食事処<br>入浴料1,200円</p>
+                            <p class="source"><a href="https://yuutoron.com/" target="_blank" rel="noopener">公式サイト</a>
+                            </p>
+                        </article>
+                    </div>
+                </article>
+                <div class="route">
+                    <strong>おすすめ：</strong>
+                    <ul style="margin:8px 0 0 1.2em;padding:0;">
+                        <li>ショッピング → ロマネット・下諏訪温泉・片倉館で入浴 → OMODAKAで夕食</li>
+                        <li>霧ヶ峰・白樺湖方面観光 → ロマネット・下諏訪温泉で入浴 → OMODAKAで夕食</li>
+                        <li>諏訪大社下社参拝 → 諏訪湖畔散策 → ロマネット／下諏訪温泉で入浴 → OMODAKAで夕食</li>
+                        <li>諏訪大社上社参拝 → 諏訪湖観光 → 片倉館で入浴 → OMODAKAで夕食</li>
+                        <li>蓼科／八ヶ岳／入笠山方面観光 → 蓼科・八ヶ岳・富士見エリアで入浴 → OMODAKAで夕食</li>
+                    </ul>
+                </div>
+            </div>
+        </section></main>
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item current" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="wrap">OMODAKA｜一棟貸切の宿｜長野県岡谷市</div>
+    </footer>
+</body>
+
+</html>

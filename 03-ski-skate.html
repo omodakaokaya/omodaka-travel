@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>03｜スキー・スケートを楽しむ｜OMODAKA</title>
+    <style>
+:root{--bg:#0b0f0e;--bg2:#111715;--card:#fff;--ink:#17201d;--muted:#d9e0dc;--line:#2a3531;--gold:#c58a3a;--gold2:#e0ad63;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans JP","Yu Gothic",sans-serif;color:var(--muted);background:var(--bg);line-height:1.8}a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(8,11,10,.94);backdrop-filter:blur(12px);border-bottom:1px solid #26302c;z-index:5;color:#fff}nav{height:66px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:700;letter-spacing:.16em}.navlinks{display:flex;gap:18px;font-size:14px}.navlinks a{text-decoration:underline;text-underline-offset:3px}
+.hero{position:relative;overflow:hidden;padding:92px 0 0;background:#101614;--hero-photo:url('https://prtimes.jp/i/55787/280/ogp/d55787-280-4ff23b900aee87dc54a3-0.jpg');background-image:linear-gradient(90deg,rgba(5,8,7,0.32) 0%,rgba(5,8,7,0.18) 42%,rgba(5,8,7,0.06) 100%),var(--hero-photo);background-size:cover;background-position:center;box-shadow:inset 0 -1px 0 rgba(255,255,255,.08)
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background-size: cover, 80% auto;
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, center center;}
+.eyebrow{letter-spacing:.18em;font-size:12px;color:#fff}.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.12;margin:8px 0;color:#fff}.lead{font-size:19px;max-width:none;color:#fff}.lead strong{color:#fff}.btn{display:inline-block;padding:9px 17px;border:1px solid #fff;border-radius:999px;text-decoration:none;margin-top:8px;color:#fff;background:rgba(0,0,0,.18)}.btn:hover{background:#fff;color:#111}
+section{padding:58px 0}.section-title{font-size:30px;margin:0 0 8px;color:#fff}.section-lead{max-width:none;margin-bottom:25px;color:#d9e0dc}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.detail{background:var(--card);color:var(--ink);border:1px solid #e3e0d8;border-radius:15px;padding:21px;box-shadow:0 8px 24px rgba(0,0,0,.25)}.card h3,.detail h3{margin:4px 0 8px;color:var(--ink)}.detail{margin-bottom:18px}.detail p{color:#28332f}.meta{font-size:13px;color:#5c6863!important}.source{font-size:18px;color:#79521f!important;font-weight:700;margin-top:14px}.source a{color:#8b5e20;text-decoration:underline;text-underline-offset:3px}.route{background:#161d1a;border:1px solid #303b36;border-radius:12px;padding:20px;margin:24px 0;color:#fff}.route strong{color:#fff}.num{color:var(--gold2);letter-spacing:.14em;font-size:12px}.back{margin:25px 0}
+.photo{display:none}.section-title:before{content:"";display:inline-block;width:5px;height:1.05em;background:var(--gold);margin-right:12px;vertical-align:-.12em;border-radius:3px}
+footer{padding:40px 0;border-top:1px solid #26302c;color:#9ba7a1;font-size:12px;background:#080b0a}footer .wrap{color:#9ba7a1}
+@media(max-width:800px){.grid,.detail-grid{grid-template-columns:1fr}.navlinks{display:none}.hero{padding:60px 0 55px;background-image:linear-gradient(180deg,rgba(5,8,7,0.32),rgba(5,8,7,0.15)),var(--hero-photo)}.lead{font-size:17px}.section-title{font-size:26px}}
+
+
+.note-small { font-size: 14px; }
+
+/* Travel category navigation */
+.travel-category-nav{padding:12px 0 46px;background:#111715;border-top:1px solid #26302c}
+.travel-category-nav .nav-title{margin:0 0 18px;text-align:center;color:#fff;font-size:20px;letter-spacing:.08em}
+.travel-category-nav .nav-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.travel-category-nav .nav-item{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:1px solid #5a5142;border-radius:999px;background:#1a211e;color:#f1eee7;text-decoration:none;font-size:14px;line-height:1.35;transition:background .2s,border-color .2s,transform .2s}
+.travel-category-nav .nav-item:hover{background:#c58a3a;border-color:#c58a3a;color:#111;transform:translateY(-1px)}
+.travel-category-nav .nav-item.current{background:#c58a3a;border-color:#c58a3a;color:#111;font-weight:700}
+.travel-category-nav .nav-home{display:inline-block;margin-top:12px;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-home:hover{background:#fff;color:#111}
+.travel-category-nav .nav-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.travel-category-nav .nav-actions .nav-home{margin-top:0}
+.travel-category-nav .nav-actions .nav-stay{display:inline-block;padding:9px 18px;border:1px solid #8b806e;border-radius:999px;color:#fff;text-decoration:none;font-size:13px}
+.travel-category-nav .nav-actions .nav-stay:hover{background:#fff;color:#111}
+
+@media(max-width:800px){.travel-category-nav{padding:10px 0 38px}.travel-category-nav .nav-grid{gap:8px}.travel-category-nav .nav-item{font-size:13px;padding:8px 13px}.travel-category-nav .nav-title{font-size:18px}}
+
+/* Category navigation spacing adjustment */
+.travel-category-nav {
+    padding-top: 0;
+}
+/* Add spacing between the introductory content and the upper navigation block. */
+.hero + .travel-category-nav {
+    margin-top: 20px;
+}
+main + .travel-category-nav {
+    margin-top: -58px;
+}
+/* Move the hero title and introduction upward to keep the lower lines off the snow background. */
+.hero > .wrap {
+    transform: translateY(-84px);
+}
+@media (max-width: 800px) {
+    .hero > .wrap {
+        transform: translateY(-60px);
+    }
+}
+
+</style>
+
+
+
+<style id="omd-hero-height-exact">
+/* All theme hero title boxes use the same visible height as page 02 */
+main > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    main > .hero {
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
+    }
+}
+</style>
+
+<style>
+
+/* OMODAKA bottom links: unified highlighted text links */
+.travel-category-nav .nav-actions {
+ display:flex !important; justify-content:space-between !important; align-items:center !important;
+ gap:24px !important; flex-wrap:wrap !important; width:100% !important; margin-top:12px !important;
+}
+.travel-category-nav .nav-actions .nav-home,
+.travel-category-nav .nav-actions .nav-stay {
+ display:inline-block !important; margin:0 !important; padding:4px 0 !important;
+ border:0 !important; border-radius:0 !important; background:transparent !important;
+ color:#e0ad63 !important; text-decoration:underline !important; text-underline-offset:5px !important;
+ text-decoration-thickness:1px !important; font-size:16px !important; font-weight:700 !important;
+}
+.travel-category-nav .nav-actions .nav-home:hover,
+.travel-category-nav .nav-actions .nav-stay:hover { color:#ffffff !important; }
+.travel-category-nav .nav-actions .nav-home:focus-visible,
+.travel-category-nav .nav-actions .nav-stay:focus-visible { outline:2px solid #e0ad63; outline-offset:4px; }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav>
+                <div class="brand">OMODAKA</div>
+                
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">旅するOMODAKA</div>
+                <h1>03｜スキー・スケートを楽しむ</h1>
+                <p class="lead">霧ヶ峰、白樺湖、蓼科、富士見方面には、OMODAKAから車で片道40～60分ほどでアクセスできる、初級者から上級者まで楽しめるスキー場が点在しています。
+                    諏訪エリアは、長野県北部に比べて降雪量は少ないものの、その分、晴天率が高く、晴れた日のスキー・スノーボードを楽しみやすいエリアです。各スキー場では、人工降雪機を活用して安定したゲレンデコンディションを維持しており、降雪量が比較的少ない地域でも、スキー・スノーボードを楽しみやすい環境が整っています。また、車で約90分まで足を延ばせば、乗鞍、大町、白馬など、北アルプス山麓に広がるスキー場へも日帰りでアクセスできます。
+                </p>
+            </div>
+        </section>
+
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item current" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="detail-grid">
+                    <article class="detail">
+                        
+                        <h3>富士見パノラマリゾート</h3>
+                        <p>中央道諏訪南ICから約7分、雪道走行をほぼせずに到着できる好アクセスが魅力です。8人乗りゴンドラで一気に標高1,780mの山頂へ。目の前に広がる八ヶ岳や富士山の絶景を眺めながら、麓まで最長3,000mのロング滑走を満喫できます。麓エリアは平均斜度8度の緩やかで広いバーンとなっており、初心者や子どもの練習に最適。スノーエスカレーター付きのキッズパークも完備され、ファミリーで安心して楽しめます。
+                        </p>
+                        <p class="meta">OMODAKAから車約40分</p>
+                        <p class="source">リンク：<a href="https://www.fujimipanorama.com/snow/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>富士見高原スキー場</h3>
+                        <p>八ヶ岳の裾野に位置するファミリーやスキー初心者に特化したアットホームなスキー場です。スノーボードの滑走が全面禁止となっているため、座り込みや高速での急な滑走を気にする必要がありません。中央高速諏訪南ICから15分で到着でき、雪道走行ほぼなしでアクセスできます。
+                        </p>
+                        <p class="meta">OMODAKAから車約45分</p>
+                        <p class="source">リンク：<a href="https://fujimikogen-ski.jp/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>ブランシュたかやま</h3>
+                        <p>ファミリー向けから上級者向け全9本の滑走コースを有する本格コース。リフト山頂駅から360度のパノラマ景色を眺めながら樹氷の間を滑り降りる滑走距離2,100mの林間ロングコースが名物です。岡谷からは湖北トンネル、木落し坂トンネル、新和田峠トンネルを抜けてすぐの場所にあり、OMODAKAから時間的には最も近く、雪道走行ほぼなしでアクセス可能です。
+                        </p>
+                        <p class="meta">OMODAKAから車約40分</p>
+                        <p class="source">リンク：<a href="https://blanche-ski.com/winter/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>ファミリーゲレンデ霧ヶ峰スキー場</h3>
+                        <p>古くからあるファミリーや初心者に特化したコンパクトなスキー場です。キッズパーク（ソリゲレンデ）などお子様用雪遊び施設が充実している。リフト代も安く、初心者や小さなお子様連れファミリーに最適です。
+                        </p>
+                        <p class="meta">OMODAKAから車約40分</p>
+                        <p class="source">リンク：<a href="https://surfsnow.jp/guide/htm/r0860s.htm" rel="noopener"
+                                target="_blank">紹介・案内ページ</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>車山高原SKYPARKスキー場</h3>
+                        <p>ビーナスライン沿いに位置する標高1,925mの山頂から広がる木々の少ない「森林限界エリア」特有の開放的なゲレンデと、360度の大パノラマ絶景が魅力のスノーリゾートです。リフト山頂駅から、初心者も迂回ルートを通って麓まで約2,000mの長距離滑走を楽しむことができます。冬季もオープンしている山頂テラスからは、目の前には雪化粧をした八ヶ岳連峰、遠くには富士山、南・中央・北アルプスの雪山を一望できます。スキー・スノーボードを履いていない観光客でも往復リフトを利用して山頂テラスへ立ち寄ることができます。
+                        </p>
+                        <p class="meta">OMODAKAから車約50分</p>
+                        <p class="source">リンク：<a href="https://winter.kurumayama-skypark.com/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>ピラタス蓼科スノーリゾート</h3>
+                        <p>日本最大級の100人乗り大型ロープウェイを備え、標高2,237mの山頂駅から広がる標高差・スケール感ともにエリアトップクラスのスノーリゾートです。山頂駅から山麓まで樹氷の間をぬうように一気に滑り降りる、滑走距離4,000mの長距離滑走を楽しめます。特に山頂駅周辺（坪庭エリア）はシラビソなどの針葉樹に雪と氷が付着した美しい樹氷群が広がり、晴れた日には日本アルプス（北・中央・南）や八ヶ岳連峰、遠く富士山まで見渡せる絶景スポットと幻想的な白銀の世界の中を、極上ドライパウダースノーを楽しみながら滑走できます。
+                        </p>
+                        <p class="meta">OMODAKAから車約70分</p>
+                        <p class="source">リンク：<a href="https://www.pilatus.jp/gelande/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>白樺湖ロイヤルヒルスキー場</h3>
+                        <p>白樺湖畔に位置し、湖を見下ろすロケーションと高いゲレンデメンテナンス品質、そしてナイタースキーの充実度が魅力のスノーリゾートです。ゲレンデからは目の前に広がる白樺湖を一望でき、湖に向かって爽快に滑り降りる絶景滑走が楽しめます。ゲレンデ全体の8割が初・中級者向けコースとなっており、斜面が優しく初心者や子どもの練習に最適です。
+                        </p>
+                        <p class="meta">OMODAKAから車約50分</p>
+                        <p class="source">リンク：<a href="https://www.shirakabako.com/experience/royal-hill-ski-resort/"
+                                rel="noopener" target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>池の平スノーパーク</h3>
+                        <p>池の平ホテル＆リゾートに隣接する「小さなお子様や完全初心者のゲレンデデビュー・雪遊び」に特化した、ファミリー目線のコンパクトなスノーリゾートです。一般的な本格的スキー場とは一線を画し、緩斜面のゲレンデや広大なキッズパークなど、キッズやビギナーが安全・快適に楽しめる工夫が凝らされています。
+                        </p>
+                        <p class="meta">OMODAKAから車約50分</p>
+                        <p class="source">リンク：<a href="https://www.shirakabaresort.jp/snowpark/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>白樺高原国際スキー場</h3>
+                        <p>初心者から上級者まで、レベルに応じて楽しめるバランスの良い構成で全6コースが整備されています。麓からゴンドラ山頂駅（1,830m）まで、完全密閉型のゴンドラリフトで一気にアプローチでき、山頂駅から麓まで、傾斜が穏やかで走りやすい「ラビットコース（初級）」や「メインコース（初・中級）」が伸びています。麓エリアには動く歩道を備えたビギナー＆キッズパークがあり、まだリフトに乗れない小さなお子様のソリ遊びや雪遊び、初めての滑走練習にも安心です。しらかば2in1スキー場とリフト券が共通で、相互を行き交うシャトルバスがあります。
+                        </p>
+                        <p class="meta">OMODAKAから車約55分</p>
+                        <p class="source">リンク：<a href="https://whitebirch.co.jp/kokusai/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>しらかば2in1スキー場</h3>
+                        <p>白樺湖・蓼科エリア屈指のワイドなオープンバーンと充実したスノーパークを備え、7基のリフトと12のコースで構成される本格的スノーリゾートです。2つの山（ゲレンデ）が一体となったスキー場で、ゲレンデ内には「ルミエール」と「コアハウス」という2つのベースハウス（拠点エリア）があり、独立した2つの斜面が山頂付近で繋がったワイドで変化に富むレイアウトが特徴です。
+                            白樺高原国際スキー場とリフト券が共通で、相互を行き交うシャトルバスがあります。</p>
+                        <p class="meta">OMODAKAから車約50分</p>
+                        <p class="source">リンク：<a href="https://whitebirch.co.jp/shirakaba2in1/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>あさひプライムスキー場</h3>
+                        <p>中央道塩尻ICから車で約15分とアクセスが良く、ファミリーや初心者の練習に特化したアットホームなスキー場です。リフト2本・コース2本のコンパクトなレイアウトで、ゆったり滑れる緩斜面が中心ですが、最大斜度30度前後の急斜面（上級者向け）も備えています。混雑も少なく、ソリ遊び専用のキッズパークも整備されているため、お子様連れのファミリーには絶好の穴場スポットです。
+                        </p>
+                        <p class="meta">OMODAKAから車約45分</p>
+                        <p class="source">リンク：<a href="https://asahivalley.jp/winter/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>Mt.乗鞍スノーリゾート</h3>
+                        <p>乗鞍岳の東斜面に位置する極上のパウダースノーリゾート。標高の高さを活かした水分量の少ないシルキーパウダーと、雄大な自然美が魅力です。リフト5基・全15コースのゲレンデは、初心者から上級者向けまでバリエーション豊かで、キッズパークも完備。アフタースキーには、乳白色の硫黄泉で親しまれる乗鞍温泉での日帰り入浴も楽しめます。アクセスは長野道松本ICより車で約60分です。
+                        </p>
+                        <p class="meta">OMODAKAから車約90分</p>
+                        <p class="source">リンク：<a href="https://www.brnorikura.jp/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>大町・白馬のスキー場</h3>
+                        <p>OMODAKAから車で約90分ほど足を延ばせば、大町・白馬方面の北アルプス山麓に広がる本格的なスキーエリアへ日帰りアクセスできます。個性豊かなスキー場が集まり、良質なパウダースノーやロングコース、雄大な北アルプスの眺望を楽しめます。近場のスキー場とは一味違う、本格的な雪山を楽しみたい方におすすめです。
+                        </p>
+                        <p class="meta">OMODAKAから車約90分</p>
+                        <p class="source">リンク：<a href="https://www.orion-tour.co.jp/ski/navi/articles/ranking/748"
+                                rel="noopener" target="_blank">紹介・案内ページ</a></p>
+                    </article>
+                    <article class="detail skate-start">
+                        
+                        <h3>やまびこの森アイスアリーナ（スケート）</h3>
+                        <p>岡谷市のやまびこ公園内にある屋内アイススケート場です。60m×30mの本格的なフィギュアスケート・アイスホッケー用の国際規格リンクを備え、一般滑走のほか、各種大会・合宿や競技の練習など、幅広く利用されています。
+                            フィギュアスケート用・ホッケー用・スピードスケート用など、各種スケート靴のレンタルも用意されているため、手ぶらで訪れて気軽にスケートを楽しむことができます。
+                            通年営業ですが、メンテナンスや選手合宿などのため、一般滑走が制限される期間があります。お出かけ前に、一般滑走の実施状況を公式サイトでご確認ください。
+                            OMODAKAから車で約10分と近く、気軽に楽しめるスケート施設です。</p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">リンク：<a href="https://yamabiko.co.jp/arena/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>やまびこ国際スケートセンター</h3>
+                        <p>やまびこ公園にある、国際公認の屋外400mスケートリンク。八ヶ岳を望む自然豊かな環境の中で、スピードスケートをはじめ、一般滑走や競技の練習・大会、合宿などに利用されています。冬季限定（11月下旬頃から2月中旬頃）の屋外リンクならではの開放感が魅力で、レンタルスケートも用意されています。OMODAKAから車で約10分と近く、冬の岡谷ならではのスケートを気軽に楽しめる施設です。<span class="note-small">※大会・貸切などにより一般滑走ができない場合がありますので、事前に営業カレンダーをご確認ください。</span>
+                        </p>
+                        <p class="meta">OMODAKAから車約10分</p>
+                        <p class="source">リンク：<a href="https://yamabiko.co.jp/nsc/" rel="noopener"
+                                target="_blank">公式サイト</a></p>
+                    </article>
+                    <article class="detail">
+                        
+                        <h3>茅野市運動公園国際スケートセンター「Nao ice Oval」</h3>
+                        <p>八ヶ岳西麓に位置する歴史ある屋外型スピードスケートリンクで、国際規格のダブルトラックを備えたスピードスケート専用の屋外オーバルリンクです。オリンピック金メダリストの小平奈緒選手が幼少期から練習を重ねたホームリンクで、愛称の「Nao
+                            ice
+                            Oval」としても親しまれています。屋外ならではの青空（八ヶ岳ブルー）や雄大な八ヶ岳連峰を背景に、風を感じながら伸び伸びと滑走することができます。市営施設のため入場料やレンタル料がとてもリーズナブルで、ファミリーや初心者のレジャー・練習にも利用しやすい環境です。
+                        </p>
+                        <p class="source">リンク：<a href="https://www.city.okaya.lg.jp/bunka_sports/sports/13764.html"
+                                rel="noopener" target="_blank">自治体サイト</a></p>
+                    </article>
+                </div>
+                
+            </div>
+        </section></main>
+        <section class="travel-category-nav" aria-label="旅するOMODAKA カテゴリー移動">
+            <div class="wrap">
+                <h2 class="nav-title">他のテーマページへ</h2>
+                <div class="nav-grid">
+                    <a class="nav-item" href="01-highland.html">高原・絶景</a><a class="nav-item" href="02-activity.html">アクティビティ</a><a class="nav-item current" href="03-ski-skate.html">スキー・スケート</a><a class="nav-item" href="04-golf.html">高原ゴルフ</a><a class="nav-item" href="05-kiminonawa.html">君の名は</a><a class="nav-item" href="06-onsen.html">日帰り温泉</a><a class="nav-item" href="07-suwa-belief.html">古代諏訪信仰</a><a class="nav-item" href="08-jomon.html">縄文世界</a><a class="nav-item" href="09-silk-okaya.html">シルク岡谷</a><a class="nav-item" href="10-suwa-fireworks.html">諏訪の花火と祭り</a><a class="nav-item" href="11-nakasendo-juku.html">中山道・初期中山道</a><a class="nav-item" href="12-matsumoto-azumino.html">松本・安曇野</a><a class="nav-item" href="13-takato.html">高遠の歴史・文化と桜</a><a class="nav-item" href="14-food.html">信州の食</a><a class="nav-item" href="15-shopping.html">ショッピング</a><a class="nav-item" href="16-suwa-sake.html">諏訪の地酒</a></div>
+                <div class="nav-actions">
+                    <a class="nav-home" href="index.html">【旅するオモダカ】トップページに戻る</a>
+                    <a class="nav-stay" href="https://www.omodaka-okaya.com/" target="_blank" rel="noopener">OMODAKAに泊まる</a>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="wrap">
+            OMODAKA｜一棟貸切の宿｜長野県岡谷市</div>
+    </footer>
+</body>
+
+</html>
